@@ -17,7 +17,10 @@ export function AuthProvider({ children }) {
   const logout = () => setIsAuthenticated(false);
 
   return (
-    <AuthCo
+    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+      {children}
+    </AuthContext.Provider>
+  );
 }
 
 export function useAuth() {
