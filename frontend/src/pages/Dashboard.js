@@ -9,13 +9,22 @@ export default function Dashboard() {
   };
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>Dashboard</h2>
-      <ul>
-        <li>Total Patients: {stats.totalPatients}</li>
-        <li>Appointments Today: {stats.appointmentsToday}</li>
-        <li>Active Users: {stats.activeUsers}</li>
-      </ul>
+      <div className="dashboard-cards">
+        <div className="dashboard-card">
+          <h3>Total Patients</h3>
+          <p>{stats.totalPatients}</p>
+        </div>
+        <div className="dashboard-card">
+          <h3>Appointments Today</h3>
+          <p>{stats.appointmentsToday}</p>
+        </div>
+        <div className="dashboard-card">
+          <h3>Active Users</h3>
+          <p>{stats.activeUsers}</p>
+        </div>
+      </div>
     </div>
   );
 }

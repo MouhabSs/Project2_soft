@@ -9,15 +9,16 @@ const dummyPatients = [
 
 export default function PatientList() {
   return (
-    <div>
+    <div className="patientlist-container">
       <h2>Patient List</h2>
-      <ul>
+      <ul className="patientlist-list">
         {dummyPatients.map(patient => (
-          <li key={patient.id}>
-            <Link to={`/patients/${patient.id}`}>{patient.name}</Link>
+          <li key={patient.id} className="patientlist-item">
+            <Link to={`/patients/${patient.id}`} className="patientlist-link">{patient.name}</Link>
           </li>
         ))}
       </ul>
+      <Link to="/patients/add" className="patientlist-add-btn">+ Add Patient</Link>
     </div>
   );
 }

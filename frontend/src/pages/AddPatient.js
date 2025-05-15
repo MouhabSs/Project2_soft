@@ -12,25 +12,27 @@ export default function AddPatient() {
   };
 
   return (
-    <div>
+    <div className="addpatient-container">
       <h2>Add Patient</h2>
-      <form onSubmit={handleSubmit}>
+      <form className="addpatient-form" onSubmit={handleSubmit}>
         <input
+          className="addpatient-input"
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="Name"
           required
         />
         <input
+          className="addpatient-input"
           value={age}
           onChange={e => setAge(e.target.value)}
           placeholder="Age"
           type="number"
           required
         />
-        <button type="submit">Add</button>
+        <button className="addpatient-btn" type="submit">Add</button>
       </form>
-      {submitted && <div>Patient "{name}" added (dummy, not saved)!</div>}
+      {submitted && <div className="addpatient-success">Patient "{name}" added (dummy, not saved)!</div>}
     </div>
   );
 }
