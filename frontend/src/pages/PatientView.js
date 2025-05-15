@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const dummyPatients = {
   1: { name: "Alice Smith", age: 30, notes: "No allergies." },
@@ -12,15 +12,18 @@ export default function PatientView() {
   const patient = dummyPatients[id];
 
   if (!patient) {
-    return <div>Patient not found.</div>;
+    return <div className="patientview-container"><div className="patientview-notfound">Patient not found.</div></div>;
   }
 
   return (
-    <div>
+    <div className="patientview-container">
       <h2>Patient Details</h2>
-      <p><strong>Name:</strong> {patient.name}</p>
-      <p><strong>Age:</strong> {patient.age}</p>
-      <p><strong>Notes:</strong> {patient.notes}</p>
+      <div className="patientview-card">
+        <p><strong>Name:</strong> {patient.name}</p>
+        <p><strong>Age:</strong> {patient.age}</p>
+        <p><strong>Notes:</strong> {patient.notes}</p>
+      </div>
+      <Link to="/patients" className="patientview-back">← Back to Patient List</Link>
     </div>
   );
 }

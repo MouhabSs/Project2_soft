@@ -5,9 +5,3530 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.login-form {
+  background: #23272f;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 320px;
+}
+
+.login-form h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #e0eafc;
+}
+
+.login-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #444857;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #2c2f36;
+  color: #e0eafc;
+  transition: border 0.2s;
+}
+
+.login-input:focus {
+  border-color: #4ea8de;
+  outline: none;
+}
+
+.login-button {
+  padding: 0.75rem 1rem;
+  background: #4ea8de;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-button:hover {
+  background: #1976d2;
+}
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #23272f;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.dashboard-card {
+  background: #2c2f36;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  text-align: center;
+  min-width: 160px;
+}
+
+.dashboard-card h3 {
+  margin-bottom: 0.5rem;
+  color: #4ea8de;
+}
+
+.dashboard-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e0eafc;
+}
+
+.home-container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.home-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.home-link {
+  text-decoration: none;
+  color: #4ea8de;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+  background: #2c2f36;
+}
+
+.home-link:hover {
+  background: #4ea8de;
+  color: #fff;
+}
+
+.patientlist-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #23272f;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.patientlist-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.patientlist-item {
+  margin-bottom: 1rem;
+}
+
+.patientlist-link {
+  color: #4ea8de;
+  background: #2c2f36;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.patientlist-link:hover {
+  background: #4ea8de;
+  color: #fff;
+}
+
+.patientlist-add-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #4ea8de;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.patientlist-add-btn:hover {
+  background: #1976d2;
+}
+
+.addpatient-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #23272f;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.addpatient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.addpatient-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #444857;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #2c2f36;
+  color: #e0eafc;
+  transition: border 0.2s;
+}
+
+.addpatient-input:focus {
+  border-color: #4ea8de;
+  outline: none;
+}
+
+.addpatient-btn {
+  padding: 0.75rem 1rem;
+  background: #4ea8de;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.addpatient-btn:hover {
+  background: #1976d2;
+}
+
+.addpatient-success {
+  margin-top: 1rem;
+  color: #4ea8de;
+  background: #2c2f36;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+}
+
+.patientview-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 2rem;
+  background: #23272f;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  text-align: left;
+}
+
+.patientview-card {
+  background: #2c2f36;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 1.5rem;
+}
+
+.patientview-notfound {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.patientview-back {
+  color: #4ea8de;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
+}
+:hover {
+  color: #fff;
+}
+
+.patientview-back:hover {
+  color: #fff;
 }
