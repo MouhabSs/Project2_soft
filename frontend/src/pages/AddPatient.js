@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavBar from "./NavBar";
 
 export default function AddPatient() {
   const [name, setName] = useState("");
@@ -12,7 +13,9 @@ export default function AddPatient() {
   };
 
   return (
-    <div className="addpatient-container">
+    <>
+      <NavBar />
+      <div className="addpatient-container">
       <h2>Add Patient</h2>
       <form className="addpatient-form" onSubmit={handleSubmit}>
         <input
@@ -34,5 +37,6 @@ export default function AddPatient() {
       </form>
       {submitted && <div className="addpatient-success">Patient "{name}" added (dummy, not saved)!</div>}
     </div>
+    </>
   );
 }

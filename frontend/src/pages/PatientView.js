@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 const dummyPatients = {
   1: { name: "Alice Smith", age: 30, notes: "No allergies." },
@@ -16,7 +17,9 @@ export default function PatientView() {
   }
 
   return (
-    <div className="patientview-container">
+    <>
+      <NavBar />
+      <div className="patientview-container">
       <h2>Patient Details</h2>
       <div className="patientview-card">
         <p><strong>Name:</strong> {patient.name}</p>
@@ -25,5 +28,6 @@ export default function PatientView() {
       </div>
       <Link to="/patients" className="patientview-back">← Back to Patient List</Link>
     </div>
+    </>
   );
 }
