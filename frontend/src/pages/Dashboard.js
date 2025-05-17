@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "./NavBar";
 
 export default function Dashboard() {
   // Dummy stats
@@ -9,22 +10,25 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="dashboard-container">
-      <h2>Dashboard</h2>
-      <div className="dashboard-cards">
-        <div className="dashboard-card">
-          <h3>Total Patients</h3>
-          <p>{stats.totalPatients}</p>
-        </div>
-        <div className="dashboard-card">
-          <h3>Appointments Today</h3>
-          <p>{stats.appointmentsToday}</p>
-        </div>
-        <div className="dashboard-card">
-          <h3>Active Users</h3>
-          <p>{stats.activeUsers}</p>
+    <>
+      <NavBar />
+      <div className="dashboard-container">
+        <h2>Dashboard</h2>
+        <div className="dashboard-cards">
+          <div className="dashboard-card">
+            <h3>Total Patients</h3>
+            <p>{stats.totalPatients}</p>
+          </div>
+          <div className="dashboard-card">
+            <h3>Appointments Today</h3>
+            <p>{stats.appointmentsToday}</p>
+          </div>
+          <div className="dashboard-card">
+            <h3>Active Users</h3>
+            <p>{stats.activeUsers}</p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

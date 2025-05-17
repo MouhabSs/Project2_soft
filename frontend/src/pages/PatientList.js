@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavBar from "./NavBar";
 
 const dummyPatients = [
   { id: 1, name: "Alice Smith" },
@@ -9,7 +10,9 @@ const dummyPatients = [
 
 export default function PatientList() {
   return (
-    <div className="patientlist-container">
+    <>
+      <NavBar />
+      <div className="patientlist-container">
       <h2>Patient List</h2>
       <ul className="patientlist-list">
         {dummyPatients.map(patient => (
@@ -20,5 +23,6 @@ export default function PatientList() {
       </ul>
       <Link to="/patients/add" className="patientlist-add-btn">+ Add Patient</Link>
     </div>
+    </>
   );
 }
