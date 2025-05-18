@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   // Dummy data for messages and reports
   const messages = [
-    "New appointment scheduled for Alice Smith.",
+    "New appointment scheduledd for Alice Smith.",
     "Bob Johnson updated his nutrition plan."
   ];
   const reports = [
