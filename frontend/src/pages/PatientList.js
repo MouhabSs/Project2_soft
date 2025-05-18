@@ -15,8 +15,11 @@ export default function PatientList() {
         }
         return res.json();
       })
-      .then(data => {
-        setPatients(data);
+      .then(result => {
+        if (!result.success) {
+          throw new Error(result.message || "Failed to fetch patients");
+        }
+        setPatients(result.data);
         setLoading(false);
       })
       .catch(err => {
