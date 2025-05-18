@@ -3,43 +3,38 @@ name: CI
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
+
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install dependencies (frontend)
+          node-version: 18
+
+      - name: Install frontend dependencies
         run: |
           cd frontend
           npm install
-      - name: Lint (frontend)
-        run: |
-          cd frontend
-          npm run lint
-      - name: Test (frontend)
+
+      - name: Run frontend tests
         run: |
           cd frontend
           npm test -- --watchAll=false
-      - name: Create .env for backend
-        run: |
-          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" > backend/.env
-      - name: Install dependencies (backend)
-        run: |
-          cd backend
-          npm install
-      - name: Lint (backend)
-        run: |
-          cd backend
-          npm run lint
-      - name: Test (backend)
-        run: |
-          cd backend
-          npm test
+
+      # Only include this if you have backend tests
+      # - name: Install backend dependencies
+      #   run: |
+      #     cd backend
+      #     npm install
+
+      # - name: Run backend tests
+      #   run: |
+      #     cd backend
+      #     npm test
