@@ -23,11 +23,14 @@ jobs:
       - name: Lint (frontend)
         run: |
           cd frontend
-          npm run lint || true
+          npm run lint
       - name: Test (frontend)
         run: |
           cd frontend
-          npm test -- --watchAll=false || true
+          npm test -- --watchAll=false
+      - name: Create .env for backend
+        run: |
+          echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" > backend/.env
       - name: Install dependencies (backend)
         run: |
           cd backend
@@ -35,8 +38,8 @@ jobs:
       - name: Lint (backend)
         run: |
           cd backend
-          npm run lint || true
+          npm run lint
       - name: Test (backend)
         run: |
           cd backend
-          npm test || true
+          npm test
