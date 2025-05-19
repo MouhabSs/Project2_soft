@@ -18,26 +18,6 @@
 }
 
 body {
-
-.home-section {
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 600px;
-  background: #23272f;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-  padding: 1.5rem 2rem;
-}
-.home-section-link {
-  color: #4ea8de;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.home-section-link:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -99,6 +79,48 @@ code {
     monospace;
 }
 
+.appointments-container {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointments-form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background: #23272f;
+  padding: 3rem 5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(196, 22, 22, 0.18);
+  margin-top: 1rem;
+}
+
+.appointments-input {
+  padding: 2rem;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #2c2f36;
+  color: #fff;
+}
+
+.appointments-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background: #4ea8de;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.appointments-btn:hover {
+  background: #1976d2;
+}
+
 .navbar-home-icon {
   display: flex;
   align-items: center;
@@ -122,7 +144,7 @@ code {
   background: #23272f;
   padding: 2.5rem 2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(173, 50, 50, 0.18);
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -172,7 +194,7 @@ code {
   padding: 2rem;
   background: #23272f;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(175, 56, 56, 0.18);
 }
 
 .dashboard-cards {
@@ -186,7 +208,7 @@ code {
   background: #2c2f36;
   border-radius: 10px;
   padding: 1.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(134, 43, 43, 0.1);
   text-align: center;
   min-width: 160px;
 }
@@ -241,7 +263,7 @@ code {
   padding: 2rem;
   background: #23272f;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(165, 26, 26, 0.18);
 }
 
 .patientlist-list {
@@ -292,7 +314,7 @@ code {
   padding: 2rem;
   background: #23272f;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(161, 24, 24, 0.18);
 }
 
 .addpatient-form {
@@ -352,7 +374,7 @@ code {
   padding: 2rem;
   background: #23272f;
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(139, 27, 27, 0.18);
   text-align: left;
 }
 
@@ -360,7 +382,7 @@ code {
   background: #2c2f36;
   border-radius: 10px;
   padding: 1.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(172, 26, 26, 0.1);
   margin-bottom: 1.5rem;
 }
 
@@ -386,7 +408,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(172, 24, 24, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -423,7 +445,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(173, 31, 31, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -460,7 +482,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(168, 25, 25, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -497,7 +519,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(180, 24, 24, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -534,7 +556,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(165, 19, 19, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -571,7 +593,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(168, 11, 11, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -608,7 +630,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(170, 20, 20, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -645,7 +667,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(187, 32, 32, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -682,7 +704,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(218, 25, 25, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -719,7 +741,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(204, 21, 21, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -756,7 +778,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(223, 26, 26, 0.1);
 }
 .navbar-list {
   display: flex;
@@ -793,7 +815,7 @@ code {
   background: #23272f;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(177, 17, 17, 0.1);
 }
 .navbar-list {
   display: flex;
