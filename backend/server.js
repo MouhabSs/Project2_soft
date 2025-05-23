@@ -31,5 +31,23 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || "Server Error" });
 });
 
+import { Server } from "socket.io";
+import http from "http";
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const server = http.createServer(app);
+const io = new Server(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+});
+
+io.on("connection", (socket) => {
+  console.log("A user connected: " + socket.id);
+  socket.on("disconnect", () => {
+    console.log("User disconnected: " + socket.id);
+  });
+});
+
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
