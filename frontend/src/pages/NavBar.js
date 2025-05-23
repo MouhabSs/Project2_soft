@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaTachometerAlt, FaUserInjured, FaCalendarAlt, FaAppleAlt, FaCog } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -14,11 +15,11 @@ export default function NavBar() {
             </svg>
           </Link>
         </li>
-        <li><Link to="/dashboard" className="navbar-link">Dashboard</Link></li>
-        <li><Link to="/patients" className="navbar-link">Patients</Link></li>
-        <li><Link to="/appointments" className="navbar-link">Appointments</Link></li>
-        <li><Link to="/nutrition-plan" className="navbar-link">Nutrition Plan</Link></li>
-        <li><Link to="/settings" className="navbar-link">Settings</Link></li>
+        <li><Link to="/dashboard" className="navbar-link"><FaTachometerAlt style={{marginRight: '8px'}}/>Dashboard</Link></li>
+        <li><Link to="/patients" className="navbar-link"><FaUserInjured style={{marginRight: '8px'}}/>Patients</Link></li>
+        <li><Link to="/appointments" className="navbar-link"><FaCalendarAlt style={{marginRight: '8px'}}/>Appointments</Link></li>
+        <li><Link to="/nutrition-plan" className="navbar-link"><FaAppleAlt style={{marginRight: '8px'}}/>Nutrition Plan</Link></li>
+        <li><Link to="/settings" className="navbar-link"><FaCog style={{marginRight: '8px'}}/>Settings</Link></li>
       </ul>
     </nav>
   );
