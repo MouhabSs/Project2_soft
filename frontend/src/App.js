@@ -13,6 +13,7 @@ import Reports from "./pages/Reports";
 import Messages from "./pages/Messages";
 import Settings from "./pages/Settings";
 import { useAuth } from "./auth/AuthProvider";
+import Notifications from "./components/Notifications";
 
 function PrivateRoute({ children }) {
   const { isAuthenticated } = useAuth();
@@ -22,6 +23,7 @@ function PrivateRoute({ children }) {
 function App() {
   return (
     <Router>
+      <Notifications />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/" element={<PrivateRoute><HomePage /></PrivateRoute>} />

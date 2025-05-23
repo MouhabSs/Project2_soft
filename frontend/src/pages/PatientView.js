@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import Modal from "../components/Modal";
+import Tooltip from "../components/Tooltip";
 
 export default function PatientView() {
   const { id } = useParams();
@@ -10,6 +12,7 @@ export default function PatientView() {
   const [error, setError] = useState(null);
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
 
   useEffect(() => {
     setError(null);
@@ -34,7 +37,6 @@ export default function PatientView() {
   }, [id]);
 
   const handleDelete = async () => {
-    if (!window.confirm("Are you sure you want to delete this patient?")) return;
     setDeleting(true);
     setDeleteError(null);
     try {
@@ -82,14 +84,31 @@ export default function PatientView() {
           }</p>
           <p><strong>Notes:</strong> {patient.notes || <span style={{color:"#888"}}>N/A</span>}</p>
         </div>
-        <button
-          className="addpatient-btn"
-          style={{ background: "#ff6b6b", marginRight: "1rem" }}
-          onClick={handleDelete}
-          disabled={deleting}
+        <Tooltip text="Delete this patient" ariaLabel="Delete patient">
+          <button
+            className="addpatient-btn"
+            style={{ background: "#ff6b6b", marginRight: "1rem" }}
+            onClick={() => setShowDeleteModal(true)}
+            disabled={deleting}
+            aria-label="Delete patient"
+          >
+            {deleting ? "Deleting..." : "Delete Patient"}
+          </button>
+        </Tooltip>
+        <Modal
+          open={showDeleteModal}
+          onClose={() => setShowDeleteModal(false)}
+          title="Confirm Delete"
+          ariaLabel="Confirm delete patient"
+          actions={
+            <>
+              <button className="modal-cancel-btn" onClick={() => setShowDeleteModal(false)} aria-label="Cancel delete">Cancel</button>
+              <button className="modal-delete-btn" onClick={handleDelete} disabled={deleting} aria-label="Confirm delete" style={{ background: "#ff6b6b", color: "#fff", marginLeft: 8 }}>{deleting ? "Deleting..." : "Delete"}</button>
+            </>
+          }
         >
-          {deleting ? "Deleting..." : "Delete Patient"}
-        </button>
+          <div>Are you sure you want to delete this patient? This action cannot be undone.</div>
+        </Modal>
         {deleteError && <div style={{ color: "red", marginTop: "0.5rem" }}>{deleteError}</div>}
         <Link to="/patients" className="patientview-back">← Back to Patient List</Link>
       </div>
