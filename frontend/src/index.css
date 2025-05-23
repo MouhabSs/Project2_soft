@@ -68,6 +68,8 @@ a:hover, .home-link:hover, .patientlist-link:hover, .patientview-back:hover {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -426,6 +428,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -463,6 +467,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -500,6 +506,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -537,6 +545,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -574,6 +584,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -611,6 +623,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -648,6 +662,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -685,6 +701,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -722,6 +740,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -759,6 +779,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -796,6 +818,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -833,6 +857,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -870,6 +896,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -907,6 +935,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -944,6 +974,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -981,6 +1013,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1018,6 +1052,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1055,6 +1091,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1092,6 +1130,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1129,6 +1169,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1166,6 +1208,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1203,6 +1247,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1240,6 +1286,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1277,6 +1325,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1314,6 +1364,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1351,6 +1403,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1388,6 +1442,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1425,6 +1481,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1462,6 +1520,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1499,6 +1559,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1536,6 +1598,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1573,6 +1637,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1610,6 +1676,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1647,6 +1715,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1684,6 +1754,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1721,6 +1793,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1758,6 +1832,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1795,6 +1871,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1832,6 +1910,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1869,6 +1949,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1906,6 +1988,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1943,6 +2027,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -1980,6 +2066,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2017,6 +2105,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2054,6 +2144,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2091,6 +2183,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2128,6 +2222,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2165,6 +2261,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2202,6 +2300,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2239,6 +2339,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2276,6 +2378,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2313,6 +2417,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2350,6 +2456,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2387,6 +2495,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2424,6 +2534,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2461,6 +2573,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2498,6 +2612,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2535,6 +2651,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2572,6 +2690,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2609,6 +2729,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2646,6 +2768,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2683,6 +2807,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2720,6 +2846,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2757,6 +2885,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2794,6 +2924,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2831,6 +2963,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2868,6 +3002,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2905,6 +3041,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2942,6 +3080,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -2979,6 +3119,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3016,6 +3158,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3053,6 +3197,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3090,6 +3236,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3127,6 +3275,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3164,6 +3314,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3201,6 +3353,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3238,6 +3392,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3275,6 +3431,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3312,6 +3470,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3349,6 +3509,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3386,6 +3548,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3423,6 +3587,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3460,6 +3626,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3497,6 +3665,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3534,6 +3704,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3571,6 +3743,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3608,6 +3782,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3645,6 +3821,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3682,6 +3860,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3719,6 +3899,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3756,6 +3938,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3793,6 +3977,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3830,6 +4016,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3867,6 +4055,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3904,6 +4094,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3941,6 +4133,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -3978,6 +4172,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4015,6 +4211,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4052,6 +4250,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4089,6 +4289,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4126,6 +4328,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4163,6 +4367,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4200,6 +4406,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4237,6 +4445,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4274,6 +4484,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4311,6 +4523,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4348,6 +4562,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4385,6 +4601,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4422,6 +4640,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4459,6 +4679,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4496,6 +4718,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4533,6 +4757,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4570,6 +4796,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4607,6 +4835,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4644,6 +4874,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4681,6 +4913,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4718,6 +4952,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4755,6 +4991,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4792,6 +5030,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4829,6 +5069,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4866,6 +5108,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4903,6 +5147,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4940,6 +5186,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -4977,6 +5225,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5014,6 +5264,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5051,6 +5303,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5088,6 +5342,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5125,6 +5381,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5162,6 +5420,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5199,6 +5459,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5236,6 +5498,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5273,6 +5537,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5310,6 +5576,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5347,6 +5615,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5384,6 +5654,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5421,6 +5693,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5458,6 +5732,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5495,6 +5771,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5532,6 +5810,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5569,6 +5849,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5606,6 +5888,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5643,6 +5927,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5680,6 +5966,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5717,6 +6005,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5754,6 +6044,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5791,6 +6083,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5828,6 +6122,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5865,6 +6161,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5902,6 +6200,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5939,6 +6239,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -5976,6 +6278,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6013,6 +6317,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6050,6 +6356,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6087,6 +6395,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6124,6 +6434,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6161,6 +6473,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6198,6 +6512,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6235,6 +6551,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6272,6 +6590,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6309,6 +6629,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6346,6 +6668,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6383,6 +6707,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6420,6 +6746,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6457,6 +6785,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6494,6 +6824,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6531,6 +6863,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6568,6 +6902,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6605,6 +6941,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6642,6 +6980,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6679,6 +7019,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6716,6 +7058,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6753,6 +7097,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6790,6 +7136,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6827,6 +7175,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6864,6 +7214,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6901,6 +7253,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6938,6 +7292,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -6975,6 +7331,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7012,6 +7370,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7049,6 +7409,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7086,6 +7448,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7123,6 +7487,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7160,6 +7526,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7197,6 +7565,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7234,6 +7604,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7271,6 +7643,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7308,6 +7682,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7345,6 +7721,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7382,6 +7760,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7419,6 +7799,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7456,6 +7838,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7493,6 +7877,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7530,6 +7916,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7567,6 +7955,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7604,6 +7994,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7641,6 +8033,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7678,6 +8072,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7715,6 +8111,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7752,6 +8150,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7789,6 +8189,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7826,6 +8228,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7863,6 +8267,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7900,6 +8306,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7937,6 +8345,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -7974,6 +8384,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8011,6 +8423,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8048,6 +8462,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8085,6 +8501,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8122,6 +8540,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8159,6 +8579,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8196,6 +8618,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8233,6 +8657,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8270,6 +8696,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8307,6 +8735,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8344,6 +8774,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8381,6 +8813,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8418,6 +8852,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8455,6 +8891,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8492,6 +8930,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8529,6 +8969,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8566,6 +9008,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8603,6 +9047,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8640,6 +9086,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8677,6 +9125,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8714,6 +9164,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8751,6 +9203,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8788,6 +9242,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8825,6 +9281,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8862,6 +9320,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8899,6 +9359,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8936,6 +9398,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -8973,6 +9437,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9010,6 +9476,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9047,6 +9515,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9084,6 +9554,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9121,6 +9593,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9158,6 +9632,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9195,6 +9671,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9232,6 +9710,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9269,6 +9749,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9306,6 +9788,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9343,6 +9827,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9380,6 +9866,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9417,6 +9905,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9454,6 +9944,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9491,6 +9983,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9528,6 +10022,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9565,6 +10061,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9602,6 +10100,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9639,6 +10139,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9676,6 +10178,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9713,6 +10217,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9750,6 +10256,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9787,6 +10295,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9824,6 +10334,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9861,6 +10373,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9898,6 +10412,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9935,6 +10451,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -9972,6 +10490,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10009,6 +10529,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10046,6 +10568,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10083,6 +10607,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10120,6 +10646,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10157,6 +10685,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10194,6 +10724,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10231,6 +10763,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10268,6 +10802,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10305,6 +10841,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10342,6 +10880,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10379,6 +10919,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10416,6 +10958,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10453,6 +10997,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10490,6 +11036,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10527,6 +11075,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10564,6 +11114,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10601,6 +11153,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10638,6 +11192,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10675,6 +11231,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10712,6 +11270,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10749,6 +11309,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10786,6 +11348,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10823,6 +11387,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10860,6 +11426,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10897,6 +11465,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10934,6 +11504,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -10971,6 +11543,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11008,6 +11582,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11045,6 +11621,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11082,6 +11660,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11119,6 +11699,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11156,6 +11738,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11193,6 +11777,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11230,6 +11816,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11267,6 +11855,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11304,6 +11894,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11341,6 +11933,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11378,6 +11972,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11415,6 +12011,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11452,6 +12050,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11489,6 +12089,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11526,6 +12128,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11563,6 +12167,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11600,6 +12206,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11637,6 +12245,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11674,6 +12284,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11711,6 +12323,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11748,6 +12362,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11785,6 +12401,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11822,6 +12440,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11859,6 +12479,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11896,6 +12518,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11933,6 +12557,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -11970,6 +12596,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12007,6 +12635,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12044,6 +12674,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12081,6 +12713,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12118,6 +12752,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12155,6 +12791,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12192,6 +12830,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12229,6 +12869,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12266,6 +12908,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12303,6 +12947,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12340,6 +12986,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12377,6 +13025,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12414,6 +13064,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12451,6 +13103,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12488,6 +13142,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12525,6 +13181,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12562,6 +13220,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12599,6 +13259,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12636,6 +13298,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12673,6 +13337,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12710,6 +13376,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12747,6 +13415,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12784,6 +13454,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12821,6 +13493,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12858,6 +13532,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12895,6 +13571,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12932,6 +13610,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -12969,6 +13649,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13006,6 +13688,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13043,6 +13727,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13080,6 +13766,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13117,6 +13805,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13154,6 +13844,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13191,6 +13883,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13228,6 +13922,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13265,6 +13961,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13302,6 +14000,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13339,6 +14039,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13376,6 +14078,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13413,6 +14117,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13450,6 +14156,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13487,6 +14195,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13524,6 +14234,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13561,6 +14273,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13598,6 +14312,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13635,6 +14351,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13672,6 +14390,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13709,6 +14429,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13746,6 +14468,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13783,6 +14507,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13820,6 +14546,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13857,6 +14585,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13894,6 +14624,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13931,6 +14663,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -13968,6 +14702,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14005,6 +14741,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14042,6 +14780,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14079,6 +14819,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14116,6 +14858,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14153,6 +14897,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14190,6 +14936,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14227,6 +14975,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14264,6 +15014,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14301,6 +15053,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14338,6 +15092,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14375,6 +15131,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14412,6 +15170,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14449,6 +15209,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14486,6 +15248,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14523,6 +15287,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14560,6 +15326,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14597,6 +15365,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14634,6 +15404,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14671,6 +15443,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14708,6 +15482,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14745,6 +15521,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14782,6 +15560,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14819,6 +15599,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14856,6 +15638,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14893,6 +15677,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14930,6 +15716,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -14967,6 +15755,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15004,6 +15794,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15041,6 +15833,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15078,6 +15872,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15115,6 +15911,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15152,6 +15950,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15189,6 +15989,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15226,6 +16028,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15263,6 +16067,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15300,6 +16106,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15337,6 +16145,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15374,6 +16184,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15411,6 +16223,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15448,6 +16262,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15485,6 +16301,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15522,6 +16340,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15559,6 +16379,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15596,6 +16418,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15633,6 +16457,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15670,6 +16496,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15707,6 +16535,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15744,6 +16574,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15781,6 +16613,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15818,6 +16652,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15855,6 +16691,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15892,6 +16730,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15929,6 +16769,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -15966,6 +16808,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16003,6 +16847,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16040,6 +16886,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16077,6 +16925,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16114,6 +16964,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16151,6 +17003,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16188,6 +17042,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16225,6 +17081,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16262,6 +17120,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16299,6 +17159,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16336,6 +17198,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16373,6 +17237,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16410,6 +17276,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16447,6 +17315,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16484,6 +17354,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16521,6 +17393,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16558,6 +17432,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16595,6 +17471,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16632,6 +17510,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16669,6 +17549,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16706,6 +17588,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16743,6 +17627,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16780,6 +17666,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16817,6 +17705,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16854,6 +17744,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16891,6 +17783,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16928,6 +17822,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -16965,6 +17861,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17002,6 +17900,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17039,6 +17939,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17076,6 +17978,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17113,6 +18017,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17150,6 +18056,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17187,6 +18095,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17224,6 +18134,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17261,6 +18173,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17298,6 +18212,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17335,6 +18251,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17372,6 +18290,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17409,6 +18329,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17446,6 +18368,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17483,6 +18407,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17520,6 +18446,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17557,6 +18485,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17594,6 +18524,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
@@ -17631,6 +18563,8 @@ code {
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
 }
 .navbar-link:hover {
   background: #4ea8de;
