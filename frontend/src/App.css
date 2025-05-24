@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom styles for the application */
+.page-container {
+  padding: 24px;
+}
+
+/* Add smooth transitions for drawer */
+.MuiDrawer-paper {
+  transition: width 0.2s ease-in-out !important;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
