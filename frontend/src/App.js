@@ -15,6 +15,9 @@ import {
   ListItemText,
   IconButton,
   useMediaQuery,
+  Avatar,
+  Tooltip,
+  Divider,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
@@ -54,11 +57,53 @@ const theme = createTheme({
       main: "#dc004e",
     },
     background: {
-      default: "#f5f5f5",
+      default: "#23272f",
+      paper: "#23272f",
+    },
+    text: {
+      primary: "#e0eafc",
+      secondary: "#b6c6e3",
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: 'Inter, "Roboto", "Helvetica", "Arial", sans-serif',
+  },
+  components: {
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#23272f",
+          color: "#e0eafc",
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          '&.Mui-selected, &.Mui-selected:hover': {
+            backgroundColor: '#4ea8de',
+            color: '#fff',
+            '& .MuiListItemIcon-root': {
+              color: '#fff',
+            },
+          },
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          color: '#4ea8de',
+        },
+      },
+    },
+    MuiListItemText: {
+      styleOverrides: {
+        primary: {
+          color: '#e0eafc',
+        },
+      },
+    },
   },
 });
 
@@ -88,27 +133,54 @@ function Layout({ children }) {
   };
 
   const drawer = (
-    <div>
-      <Toolbar>
-        <Typography variant="h6" noWrap component="div">
-          HealthCare
-        </Typography>
-      </Toolbar>
-      <List>
-        {menuItems.map((item) => (
-          <ListItem
-            button
-            key={item.text}
-            component={Link}
-            to={item.path}
-            selected={location.pathname === item.path}
-          >
-            <ListItemIcon>{item.icon}</ListItemIcon>
-            <ListItemText primary={item.text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
+    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+      <div>
+        <Toolbar>
+          <Typography variant="h6" noWrap component="div" sx={{ color: '#e0eafc', fontWeight: 700 }}>
+            HealthCare
+          </Typography>
+        </Toolbar>
+        <Divider sx={{ background: '#414345' }} />
+        <List>
+          {menuItems.map((item) => (
+            <Tooltip title={item.text} placement="right" arrow key={item.text}>
+              <ListItem
+                button
+                key={item.text}
+                component={Link}
+                to={item.path}
+                selected={location.pathname === item.path}
+                sx={{
+                  borderRadius: 2,
+                  mb: 0.5,
+                  '&.Mui-selected': {
+                    backgroundColor: '#4ea8de',
+                    color: '#fff',
+                  },
+                  '&:hover': {
+                    backgroundColor: '#414345',
+                  },
+                }}
+              >
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.text} />
+              </ListItem>
+            </Tooltip>
+          ))}
+        </List>
+      </div>
+      <Box sx={{ p: 2, borderTop: '1px solid #414345', display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Avatar sx={{ bgcolor: '#4ea8de', width: 40, height: 40 }}>U</Avatar>
+        <Box>
+          <Typography variant="body1" sx={{ color: '#e0eafc', fontWeight: 600 }}>
+            User Name
+          </Typography>
+          <Typography variant="body2" sx={{ color: '#b6c6e3' }}>
+            user@email.com
+          </Typography>
+        </Box>
+      </Box>
+    </Box>
   );
 
   return (
@@ -119,6 +191,9 @@ function Layout({ children }) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          bgcolor: '#23272f',
+          color: '#e0eafc',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.10)',
         }}
       >
         <Toolbar>
@@ -151,6 +226,9 @@ function Layout({ children }) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#23272f",
+              color: "#e0eafc",
+              borderRight: 'none',
             },
           }}
         >
@@ -164,6 +242,8 @@ function Layout({ children }) {
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           mt: "64px",
+          background: 'linear-gradient(135deg, #232526 0%, #414345 100%)',
+          minHeight: '100vh',
         }}
       >
         {children}
