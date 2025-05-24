@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import { FaSearch, FaUserEdit, FaEye } from "react-icons/fa";
+import { FaSearch, FaUserEdit, FaEye, FaPlus, FaSpinner } from "react-icons/fa";
+import "../styles/global.css";
 
 export default function PatientList() {
   const [patients, setPatients] = useState([]);
@@ -38,41 +39,142 @@ export default function PatientList() {
   return (
     <>
       <NavBar />
-      <div className="patientlist-container">
-        <h2>Patient List</h2>
-        <div className="patientlist-searchbar">
-          <FaSearch  className="patientlist-search-icon" />
-          <input
-            type="text"
-            placeholder="Search by name..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-            className="patientlist-search-input"
-            aria-label="Search patients by name"
-            style={{ fontSize: "1em", height: "2em", width: "80%" }}
-          />
-        </div>
-        {loading ? (
-          <div>Loading...</div>
-        ) : error ? (
-          <div style={{ color: "red" }}>Error: {error}</div>
-        ) : filteredPatients.length === 0 ? (
-          <div>No patients found.</div>
-        ) : (
-          <ul className="patientlist-list"> 
-            {filteredPatients.map(patient => (
-              <li key={patient._id} className="patientlist-item">
-                <span className="patientlist-name" style={{ fontSize: "2em", fontWeight: "bold" }}>{patient.name}</span>
-                <div className="patientlist-actions">
-                  <Link to={`/patients/${patient._id}`} className="patientlist-action-btn" title="View patient"><FaEye style={{ fontSize: "2em" }} /></Link>
-                  <Link to={`/patients/${patient._id}/edit`} className="patientlist-action-btn" title="Edit patient"><FaUserEdit style={{ fontSize: "2em" }} /></Link>
+      <div className="container" style={{ paddingTop: "var(--spacing-xl)" }}>
+        <div className="card">
+          <div style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "var(--spacing-lg)"
+          }}>
+            <h1 style={{ color: "var(--primary-color)" }}>Patient List</h1>
+            <Link to="/patients/add" className="btn btn-primary" style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "var(--spacing-sm)"
+            }}>
+              <FaPlus /> Add Patient
+            </Link>
+          </div>
+
+          <div style={{
+            position: "relative",
+            marginBottom: "var(--spacing-xl)"
+          }}>
+            <FaSearch style={{
+              position: "absolute",
+              left: "var(--spacing-md)",
+              top: "50%",
+              transform: "translateY(-50%)",
+              color: "var(--text-secondary)"
+            }} />
+            <input
+              type="text"
+              placeholder="Search patients by name..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              style={{
+                paddingLeft: "calc(var(--spacing-md) * 2 + 16px)",
+                width: "100%"
+              }}
+              aria-label="Search patients by name"
+            />
+          </div>
+
+          {loading ? (
+            <div style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              padding: "var(--spacing-xl)"
+            }}>
+              <FaSpinner style={{
+                fontSize: "2rem",
+                color: "var(--primary-color)",
+                animation: "spin 1s linear infinite"
+              }} />
+            </div>
+          ) : error ? (
+            <div className="card" style={{
+              backgroundColor: "var(--error-color)",
+              color: "white",
+              padding: "var(--spacing-md)"
+            }}>
+              Error: {error}
+            </div>
+          ) : filteredPatients.length === 0 ? (
+            <div className="card" style={{
+              textAlign: "center",
+              padding: "var(--spacing-xl)",
+              color: "var(--text-secondary)"
+            }}>
+              No patients found.
+            </div>
+          ) : (
+            <div style={{
+              display: "grid",
+              gap: "var(--spacing-md)"
+            }}>
+              {filteredPatients.map(patient => (
+                <div key={patient._id} className="card" style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "var(--spacing-lg)"
+                }}>
+                  <div>
+                    <h3 style={{ margin: 0 }}>{patient.name}</h3>
+                    {patient.email && (
+                      <p style={{
+                        color: "var(--text-secondary)",
+                        margin: "var(--spacing-xs) 0 0 0"
+                      }}>
+                        {patient.email}
+                      </p>
+                    )}
+                  </div>
+                  <div style={{
+                    display: "flex",
+                    gap: "var(--spacing-sm)"
+                  }}>
+                    <Link
+                      to={`/patients/${patient._id}`}
+                      className="btn"
+                      style={{
+                        background: "none",
+                        color: "var(--primary-color)"
+                      }}
+                      title="View patient"
+                    >
+                      <FaEye size={20} />
+                    </Link>
+                    <Link
+                      to={`/patients/${patient._id}/edit`}
+                      className="btn"
+                      style={{
+                        background: "none",
+                        color: "var(--primary-color)"
+                      }}
+                      title="Edit patient"
+                    >
+                      <FaUserEdit size={20} />
+                    </Link>
+                  </div>
                 </div>
-              </li>
-            ))}
-          </ul>
-        )}
-        <Link to="/patients/add" className="patientlist-add-btn">+ Add Patient</Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
+
+      <style>
+        {`
+          @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+        `}
+      </style>
     </>
   );
 }
