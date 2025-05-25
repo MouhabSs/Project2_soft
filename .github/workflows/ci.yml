@@ -29,12 +29,12 @@ jobs:
           npm test -- --watchAll=false
 
       # Only include this if you have backend tests
-      # - name: Install backend dependencies
-      #   run: |
-      #     cd backend
-      #     npm install
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm install
 
-      # - name: Run backend tests
-      #   run: |
-      #     cd backend
-      #     npm test
+      - name: Run backend tests
+        run: |
+          cd backend
+          npm test
