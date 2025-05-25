@@ -58,7 +58,49 @@ router.post("/", async (req, res, next) => {
 // GET /api/patients - Get all patients
 router.get("/", async (req, res, next) => {
   try {
-    const patients = await Patient.find();
+    const filter = {};
+    const { age, gender, medicalConditions } = req.query;
+
+    if (age) {
+      // Assuming age can be a single value for exact match or a range (e.g., '30-40')
+      // For simplicity, let's support exact age or a minimum age (e.g., '>=30') or a maximum age '<40'
+      if (age.startsWith('>=')) {
+        filter.age = { $gte: parseInt(age.substring(2)) };
+      } else if (age.startsWith('<=')) {
+         filter.age = { $lte: parseInt(age.substring(2)) };
+      } else if (age.startsWith('>')) {
+         filter.age = { $gt: parseInt(age.substring(1)) };
+      } else if (age.startsWith('<')) {
+         filter.age = { $lt: parseInt(age.substring(1)) };
+      } else if (age.includes('-')) {
+        const [minAge, maxAge] = age.split('-').map(Number);
+        filter.age = { $gte: minAge, $lte: maxAge };
+      } else {
+        filter.age = parseInt(age);
+      }
+      // Ensure age is a valid number after parsing/splitting
+       if (isNaN(filter.age) && (!filter.age || !filter.age.$gte)) {
+           delete filter.age; // Remove invalid age filter
+       }
+    }
+
+    if (gender) {
+      filter.gender = gender; // Assuming exact match for gender
+    }
+
+    if (medicalConditions) {
+      // Assuming medicalConditions is a comma-separated string of conditions
+      const conditionsArray = medicalConditions.split(',').map(condition => new RegExp(condition.trim(), 'i'));
+      filter.medicalConditions = { $in: conditionsArray }; // Match if patient has any of the listed conditions
+    }
+
+    // Add name search back in, combining with filters if they exist
+    const { search } = req.query;
+    if (search) {
+       filter.name = { $regex: search, $options: 'i' }; // Case-insensitive search by name
+    }
+
+    const patients = await Patient.find(filter);
     res.json({
       success: true,
       data: patients
