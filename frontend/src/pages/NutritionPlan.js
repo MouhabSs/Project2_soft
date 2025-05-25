@@ -1,20 +1,36 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "./NavBar";
-import { FaAppleAlt, FaBreadSlice, FaDrumstickBite, FaFish, FaUser, FaSave, FaHistory, FaSpinner } from "react-icons/fa";
+import { FaAppleAlt, FaBreadSlice, FaDrumstickBite, FaFish, FaUser, FaSave, FaHistory, FaSpinner, FaPlusCircle, FaMinusCircle, FaSeedling, FaFire, FaEgg, FaLeaf } from "react-icons/fa";
+import NutritionPlanHistory from "../components/NutritionPlanHistory";
+
+// Define available meal types
+const MEAL_TYPES = ['Breakfast', 'Lunch', 'Dinner', 'Snack'];
+
+// Define some preset meal options with nutritional info (placeholders)
+const PRESET_MEALS = [
+  { type: 'Breakfast', description: 'Oatmeal with berries and nuts', calories: 350, protein: 10, carbs: 55, fat: 10 },
+  { type: 'Breakfast', description: 'Scrambled eggs with spinach and whole grain toast', calories: 400, protein: 25, carbs: 30, fat: 20 },
+  { type: 'Lunch', description: 'Grilled chicken salad with avocado', calories: 450, protein: 40, carbs: 15, fat: 25 },
+  { type: 'Lunch', description: 'Lentil soup with a side of whole-wheat bread', calories: 380, protein: 18, carbs: 60, fat: 8 },
+  { type: 'Dinner', description: 'Baked salmon with roasted vegetables', calories: 500, protein: 45, carbs: 25, fat: 28 },
+  { type: 'Dinner', description: 'Quinoa and black bean bowls', calories: 420, protein: 15, carbs: 70, fat: 10 },
+  { type: 'Snack', description: 'Greek yogurt with honey', calories: 150, protein: 15, carbs: 10, fat: 5 },
+  { type: 'Snack', description: 'Apple slices with peanut butter', calories: 200, protein: 8, carbs: 20, fat: 12 },
+];
 
 export default function NutritionPlan() {
   const [patients, setPatients] = useState([]);
   const [selectedPatientId, setSelectedPatientId] = useState("");
   const [nutritionPlan, setNutritionPlan] = useState({
-    breakfast: "",
-    lunch: "",
-    dinner: "",
+    meals: [],
+    startDate: '',
+    endDate: '',
+    _id: null // To store the plan ID if it exists
   });
   const [loadingPatients, setLoadingPatients] = useState(true);
   const [loadingPlan, setLoadingPlan] = useState(false);
   const [savingPlan, setSavingPlan] = useState(false);
   const [feedback, setFeedback] = useState({ message: "", type: "" }); // { message: '...', type: 'success' | 'error' }
-  const [planHistory, setPlanHistory] = useState([]); // Placeholder for history
 
   // Fetch patients on component mount
   useEffect(() => {
@@ -39,21 +55,16 @@ export default function NutritionPlan() {
     if (selectedPatientId) {
       setLoadingPlan(true);
       setFeedback({ message: "", type: "" });
-      // Replace with actual API call to fetch patient's nutrition plan
-      fetch(`/api/nutritionplan/${selectedPatientId}`)
+      // API call to fetch patient's nutrition plan using patientId
+      fetch(`/api/nutrition-plans/${selectedPatientId}`)
         .then(res => res.json())
         .then(result => {
           if (result.success && result.data) {
+            // Set fetched plan data, including _id if it exists
             setNutritionPlan(result.data);
           } else {
-             // If no plan exists, initialize with empty fields
-            setNutritionPlan({
-              breakfast: "",
-              lunch: "",
-              dinner: "",
-            });
-            // Optionally set feedback if no plan found explicitly
-            // setFeedback({ message: "No nutrition plan found for this patient. You can create one.", type: "info" });
+            // If no plan exists or fetching failed, initialize with empty meals
+            setNutritionPlan({ meals: [], startDate: '', endDate: '', _id: null });
           }
           setLoadingPlan(false);
         })
@@ -61,88 +72,120 @@ export default function NutritionPlan() {
           setFeedback({ message: err.message || "Failed to fetch nutrition plan", type: "error" });
           setLoadingPlan(false);
         });
-         // Placeholder: Fetch plan history
-         fetch(`/api/nutritionplan/${selectedPatientId}/history`)
-         .then(res => res.json())
-         .then(result => {
-           if (result.success && result.data) {
-             setPlanHistory(result.data);
-           } else {
-             setPlanHistory([]);
-           }
-         })
-         .catch(err => console.error("Failed to fetch plan history:", err)); // Log error, don't show to user for history
-
     } else {
-      // Reset plan and history when no patient is selected
-      setNutritionPlan({
-        breakfast: "",
-        lunch: "",
-        dinner: "",
-      });
-      setPlanHistory([]);
+      // Reset plan when no patient is selected
+      setNutritionPlan({ meals: [], startDate: '', endDate: '', _id: null });
     }
   }, [selectedPatientId]);
 
-  const handlePlanChange = (meal, value) => {
-    setNutritionPlan(prevPlan => ({ ...prevPlan, [meal]: value }));
+  const handleMealChange = (index, field, value) => {
+    const updatedMeals = [...nutritionPlan.meals];
+    updatedMeals[index][field] = field === 'calories' || field === 'protein' || field === 'carbs' || field === 'fat' ? (value === '' ? undefined : Number(value)) : value;
+     // Ensure nutritional values are numbers or undefined
+    setNutritionPlan(prevPlan => ({ ...prevPlan, meals: updatedMeals }));
   };
 
-  const handleSavePlan = () => {
+  const handleAddMeal = (type, description, calories, protein, carbs, fat) => {
+    setNutritionPlan(prevPlan => ({
+      ...prevPlan,
+      meals: [...prevPlan.meals, { type, description, calories, protein, carbs, fat }]
+    }));
+  };
+
+  const handleRemoveMeal = (index) => {
+    const updatedMeals = [...nutritionPlan.meals];
+    updatedMeals.splice(index, 1);
+    setNutritionPlan(prevPlan => ({ ...prevPlan, meals: updatedMeals }));
+  };
+
+  const handleDateChange = (field, value) => {
+    setNutritionPlan(prevPlan => ({ ...prevPlan, [field]: value }));
+  };
+
+  const handleSavePlan = async () => {
     if (!selectedPatientId) {
       setFeedback({ message: "Please select a patient first.", type: "error" });
+      return;
+    }
+
+    if (nutritionPlan.meals.some(meal => !meal.type || !meal.description)) {
+      setFeedback({ message: "Please ensure all added meals have a type and description.", type: "error" });
       return;
     }
 
     setSavingPlan(true);
     setFeedback({ message: "", type: "" });
 
-    // Replace with actual API call to save/update the nutrition plan
-    fetch(`/api/nutritionplan/${selectedPatientId}`, {
-      method: "POST", // or PUT if updating existing
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(nutritionPlan),
-    })
-      .then(res => res.json())
-      .then(result => {
-        if (result.success) {
-          setFeedback({ message: "Nutrition plan saved successfully!", type: "success" });
-          // Re-fetch history after saving
-          fetch(`/api/nutritionplan/${selectedPatientId}/history`)
-            .then(res => res.json())
-            .then(historyResult => {
-              if (historyResult.success && historyResult.data) {
-                setPlanHistory(historyResult.data);
-              } else {
-                 setPlanHistory([]);
-              }
-            })
-            .catch(err => console.error("Failed to re-fetch history:", err));
-
-        } else {
-          setFeedback({ message: result.message || "Failed to save nutrition plan", type: "error" });
-        }
-        setSavingPlan(false);
-      })
-      .catch(err => {
-        setFeedback({ message: err.message || "Failed to save nutrition plan", type: "error" });
-        setSavingPlan(false);
+    try {
+      // Use POST for both creating and updating based on backend logic
+      const res = await fetch("/api/nutrition-plans", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          patientId: selectedPatientId,
+          plan: {
+            meals: nutritionPlan.meals,
+            startDate: nutritionPlan.startDate,
+            endDate: nutritionPlan.endDate,
+            // Recalculate totals here before sending to backend
+            totalCalories: totalNutrition.calories,
+            totalProtein: totalNutrition.protein,
+            totalCarbs: totalNutrition.carbs,
+            totalFat: totalNutrition.fat
+          }
+        }),
       });
+
+      const result = await res.json();
+
+      if (result.success) {
+        setFeedback({ message: result.message, type: "success" });
+        // Update the plan state with the saved plan's _id and any default values from backend
+        setNutritionPlan(result.data);
+      } else {
+        setFeedback({ message: result.message || "Failed to save nutrition plan", type: "error" });
+      }
+    } catch (err) {
+      setFeedback({ message: err.message || "Failed to save nutrition plan", type: "error" });
+    } finally {
+      setSavingPlan(false);
+    }
   };
+
+   // Helper to get icon for meal type
+  const getMealIcon = (type) => {
+    switch(type) {
+      case 'Breakfast': return <FaBreadSlice color="#ffd580" />; // Warm yellow
+      case 'Lunch': return <FaDrumstickBite color="#fbbf24" />; // Amber
+      case 'Dinner': return <FaFish color="#60a5fa" />; // Blue
+      case 'Snack': return <FaSeedling color="#84cc16" />; // Green
+      default: return <FaAppleAlt />;
+    }
+  };
+
+   // Calculate total nutritional information
+  const totalNutrition = (nutritionPlan && nutritionPlan.meals ? nutritionPlan.meals : []).reduce((totals, meal) => {
+    totals.calories += meal.calories || 0;
+    totals.protein += meal.protein || 0;
+    totals.carbs += meal.carbs || 0;
+    totals.fat += meal.fat || 0;
+    return totals;
+  }, { calories: 0, protein: 0, carbs: 0, fat: 0 });
+
 
   return (
     <>
       <NavBar />
       <div style={{
-        minHeight: "calc(100vh - 64px)", // Adjust for fixed navbar height
+        minHeight: "calc(100vh - 64px)",
         display: "flex",
-        alignItems: "flex-start", // Align to top
+        alignItems: "flex-start",
         justifyContent: "center",
-        padding: "var(--spacing-xl)", // Add padding
+        padding: "var(--spacing-xl)",
         background: "none"
       }}>
         <div className="card fade-in" style={{
-          maxWidth: 600, // Increase max width slightly
+          maxWidth: 700, // Increased max width
           width: "100%",
           padding: "2.5rem 2rem",
           boxShadow: "var(--shadow-lg)",
@@ -179,8 +222,8 @@ export default function NutritionPlan() {
                     color: "#e0eafc",
                     border: "1px solid #4ea8de",
                     fontSize: "var(--font-size-base)",
-                    appearance: "none", // Hide default arrow
-                    paddingRight: "calc(var(--spacing-md) * 2 + 16px)", // Make space for custom arrow
+                    appearance: "none",
+                    paddingRight: "calc(var(--spacing-md) * 2 + 16px)",
                   }}
                   disabled={savingPlan}
                 >
@@ -191,7 +234,6 @@ export default function NutritionPlan() {
                     </option>
                   ))}
                 </select>
-                 {/* Custom dropdown arrow */}
                 <div style={{
                   position: "absolute",
                   right: "var(--spacing-md)",
@@ -211,95 +253,294 @@ export default function NutritionPlan() {
           {selectedPatientId && (
             <div className="fade-in">
               <h2 style={{ fontSize: "1.5rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
-                Current Nutrition Plan
+                Assign/Edit Plan
               </h2>
+
+               {/* Date Range */}
+               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--spacing-md)", marginBottom: "var(--spacing-lg)" }}>
+                 <div>
+                    <label style={{ display: "block", marginBottom: "var(--spacing-sm)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Start Date:</label>
+                    <input
+                      type="date"
+                      value={nutritionPlan.startDate ? new Date(nutritionPlan.startDate).toISOString().split('T')[0] : ''}
+                      onChange={e => handleDateChange('startDate', e.target.value)}
+                      style={{
+                        width: "100%",
+                        padding: "var(--spacing-sm)",
+                        borderRadius: "var(--radius-md)",
+                        background: "#23272f",
+                        color: "#e0eafc",
+                        border: "1px solid #414345",
+                         fontSize: "var(--font-size-base)"
+                      }}
+                       disabled={savingPlan}
+                    />
+                 </div>
+                 <div>
+                    <label style={{ display: "block", marginBottom: "var(--spacing-sm)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>End Date:</label>
+                    <input
+                      type="date"
+                      value={nutritionPlan.endDate ? new Date(nutritionPlan.endDate).toISOString().split('T')[0] : ''}
+                      onChange={e => handleDateChange('endDate', e.target.value)}
+                      style={{
+                        width: "100%",
+                        padding: "var(--spacing-sm)",
+                        borderRadius: "var(--radius-md)",
+                        background: "#23272f",
+                        color: "#e0eafc",
+                        border: "1px solid #414345",
+                         fontSize: "var(--font-size-base)"
+                      }}
+                       disabled={savingPlan}
+                    />
+                 </div>
+               </div>
+
               {loadingPlan ? (
                 <div style={{ textAlign: "center" }}>Loading Plan...</div>
               ) : feedback.type === "error" && feedback.message.includes("fetch nutrition plan") ? (
                  <div style={{ color: "#ef4444", textAlign: "center" }}>{feedback.message}</div>
               ) : (
-                <div style={{ display: "grid", gap: "var(--spacing-md)", marginBottom: "var(--spacing-lg)" }}>
-                  <div style={{ textAlign: "left"}}>
-                    <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", marginBottom: "var(--spacing-sm)" }}>
-                      <FaBreadSlice color="#ffd580" style={{ marginRight: "var(--spacing-sm)" }} /> Breakfast:
-                    </h3>
-                    <div style={{ display: "flex", gap: 8, marginBottom: 8 }}>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("breakfast", "Oatmeal with fruit and nuts")}>Oatmeal</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("breakfast", "Greek yogurt with berries")}>Yogurt</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("breakfast", "Eggs and whole grain toast")}>Eggs & Toast</button>
+                <div style={{ display: "flex", flexDirection: "column", gap: "var(--spacing-md)" }}>
+                  {nutritionPlan.meals.map((meal, index) => (
+                    <div key={index} style={{
+                      background: "#2c2f36",
+                      padding: "var(--spacing-md)",
+                      borderRadius: "var(--radius-md)",
+                      border: "1px solid #414345"
+                    }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "var(--spacing-sm)" }}>
+                         <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", margin: 0 }}>
+                           {getMealIcon(meal.type)} {meal.type}
+                         </h3>
+                         <button
+                            onClick={() => handleRemoveMeal(index)}
+                            style={{
+                              background: "none",
+                              border: "none",
+                              color: "#ff6b6b",
+                              cursor: "pointer",
+                              fontSize: "1.2rem"
+                            }}
+                            disabled={savingPlan}
+                            aria-label="Remove meal"
+                          >
+                            <FaMinusCircle />
+                          </button>
+                      </div>
+
+                       {/* Meal Type Dropdown */}
+                      <select
+                        value={meal.type}
+                        onChange={e => handleMealChange(index, 'type', e.target.value)}
+                        style={{
+                           width: "100%",
+                           padding: "var(--spacing-sm)",
+                           borderRadius: "var(--radius-md)",
+                           background: "#23272f",
+                           color: "#e0eafc",
+                           border: "1px solid #414345",
+                            fontSize: "var(--font-size-base)",
+                            marginBottom: "var(--spacing-sm)"
+                         }}
+                        disabled={savingPlan}
+                      >
+                        <option value="">Select Meal Type</option>
+                        {MEAL_TYPES.map(type => (
+                          <option key={type} value={type}>{type}</option>
+                        ))}
+                      </select>
+
+                       {/* Meal Description */}
+                       <textarea
+                        value={meal.description}
+                        onChange={e => handleMealChange(index, 'description', e.target.value)}
+                        rows={2}
+                        placeholder="Description of the meal..."
+                        style={{
+                          width: "100%",
+                          padding: "var(--spacing-sm)",
+                          borderRadius: "var(--radius-md)",
+                          background: "#23272f",
+                          color: "#e0eafc",
+                          border: "1px solid #414345",
+                          resize: "vertical",
+                           fontSize: "var(--font-size-base)",
+                          marginBottom: "var(--spacing-sm)"
+                        }}
+                        disabled={savingPlan}
+                      />
+
+                       {/* Nutritional Info Inputs */}
+                       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: "var(--spacing-sm)" }}>
+                         <div>
+                           <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Calories:</label>
+                            <input
+                              type="number"
+                              value={meal.calories || ''}
+                              onChange={e => handleMealChange(index, 'calories', e.target.value)}
+                              placeholder="kcal"
+                              min="0"
+                              style={{
+                                width: "100%",
+                                padding: "var(--spacing-sm)",
+                                borderRadius: "var(--radius-md)",
+                                background: "#23272f",
+                                color: "#e0eafc",
+                                border: "1px solid #414345",
+                                fontSize: "var(--font-size-base)"
+                              }}
+                               disabled={savingPlan}
+                            />
+                         </div>
+                         <div>
+                           <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Protein:</label>
+                            <input
+                              type="number"
+                              value={meal.protein || ''}
+                              onChange={e => handleMealChange(index, 'protein', e.target.value)}
+                              placeholder="g"
+                              min="0"
+                              style={{
+                                width: "100%",
+                                padding: "var(--spacing-sm)",
+                                borderRadius: "var(--radius-md)",
+                                background: "#23272f",
+                                color: "#e0eafc",
+                                border: "1px solid #414345",
+                                fontSize: "var(--font-size-base)"
+                              }}
+                               disabled={savingPlan}
+                            />
+                         </div>
+                         <div>
+                           <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Carbs:</label>
+                            <input
+                              type="number"
+                              value={meal.carbs || ''}
+                              onChange={e => handleMealChange(index, 'carbs', e.target.value)}
+                              placeholder="g"
+                              min="0"
+                              style={{
+                                width: "100%",
+                                padding: "var(--spacing-sm)",
+                                borderRadius: "var(--radius-md)",
+                                background: "#23272f",
+                                color: "#e0eafc",
+                                border: "1px solid #414345",
+                                fontSize: "var(--font-size-base)"
+                              }}
+                               disabled={savingPlan}
+                            />
+                         </div>
+                         <div>
+                           <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Fat:</label>
+                            <input
+                              type="number"
+                              value={meal.fat || ''}
+                              onChange={e => handleMealChange(index, 'fat', e.target.value)}
+                              placeholder="g"
+                              min="0"
+                              style={{
+                                width: "100%",
+                                padding: "var(--spacing-sm)",
+                                borderRadius: "var(--radius-md)",
+                                background: "#23272f",
+                                color: "#e0eafc",
+                                border: "1px solid #414345",
+                                fontSize: "var(--font-size-base)"
+                              }}
+                               disabled={savingPlan}
+                            />
+                         </div>
+                       </div>
+
                     </div>
-                     <textarea
-                      value={nutritionPlan.breakfast}
-                      onChange={e => handlePlanChange("breakfast", e.target.value)}
-                      rows={3}
-                      placeholder="E.g. Oatmeal with fruit, Greek yogurt, eggs & toast..."
-                      style={{
-                        width: "100%",
-                        padding: "var(--spacing-sm)",
+                  ))}
+
+                   {/* Add Meal Buttons */}
+                   <div style={{ display: "flex", justifyContent: "center", gap: "var(--spacing-md)", marginTop: "var(--spacing-md)" }}>
+                     {MEAL_TYPES.map(type => (
+                        <button
+                          key={type}
+                          onClick={() => handleAddMeal(type)}
+                          style={{
+                            background: "#414345",
+                            color: "#4ea8de",
+                            border: "1px solid #4ea8de",
+                            borderRadius: "var(--radius-md)",
+                            padding: "var(--spacing-sm) var(--spacing-md)",
+                            fontSize: "var(--font-size-base)",
+                            cursor: "pointer",
+                             opacity: savingPlan ? 0.7 : 1,
+                             cursor: savingPlan ? "not-allowed" : "pointer"
+                          }}
+                           disabled={savingPlan}
+                        >
+                          <FaPlusCircle style={{ marginRight: "var(--spacing-xs)" }} /> Add {type}
+                        </button>
+                     ))}
+                   </div>
+
+                   {/* Preset Meals Section */}
+                   <div style={{ marginTop: "var(--spacing-lg)", paddingTop: "var(--spacing-md)", borderTop: "1px solid #414345" }}>
+                     <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>Add Preset Meal:</h3>
+                     {MEAL_TYPES.map(mealType => (
+                       <div key={mealType} style={{ marginBottom: "var(--spacing-md)" }}>
+                         <h4 style={{ fontSize: "1rem", color: "#b6c6e3", marginBottom: "var(--spacing-sm)" }}>{mealType} Presets:</h4>
+                         <div style={{ display: "flex", flexWrap: "wrap", gap: "var(--spacing-sm)" }}>
+                           {PRESET_MEALS.filter(meal => meal.type === mealType).map((preset, index) => (
+                             <button
+                               key={index}
+                               onClick={() => handleAddMeal(preset.type, preset.description, preset.calories, preset.protein, preset.carbs, preset.fat)}
+                               style={{
+                                 background: "#414345",
+                                 color: "var(--text-primary)",
+                                 border: "1px solid #414345",
+                                 borderRadius: "var(--radius-md)",
+                                 padding: "var(--spacing-sm) var(--spacing-md)",
+                                 fontSize: "var(--font-size-sm)",
+                                 cursor: "pointer",
+                                 transition: "background-color 0.2s ease",
+                                 opacity: savingPlan ? 0.7 : 1,
+                                 cursor: savingPlan ? "not-allowed" : "pointer"
+                               }}
+                               disabled={savingPlan}
+                             >
+                               {preset.description}
+                             </button>
+                           ))}
+                         </div>
+                       </div>
+                     ))}
+                   </div>
+
+                   {/* Total Nutrition Summary */}
+                   {nutritionPlan.meals.length > 0 && (
+                      <div style={{
+                        marginTop: "var(--spacing-lg)",
+                        padding: "var(--spacing-md)",
+                        background: "#2c2f36",
                         borderRadius: "var(--radius-md)",
-                        background: "#23272f",
-                        color: "#e0eafc",
-                        border: "1px solid #414345",
-                        resize: "vertical",
-                        fontSize: "var(--font-size-base)"
-                      }}
-                      disabled={savingPlan}
-                    />
-                  </div>
-                  <div style={{ textAlign: "left"}}>
-                     <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", marginBottom: "var(--spacing-sm)" }}>
-                       <FaDrumstickBite color="#fbbf24" style={{ marginRight: "var(--spacing-sm)" }} /> Lunch:
-                     </h3>
-                    <div style={{ display: "flex", gap: 8, marginBottom: 8 }}>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("lunch", "Grilled chicken salad")}>Chicken Salad</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("lunch", "Quinoa bowl with veggies")}>Quinoa Bowl</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("lunch", "Turkey sandwich on whole grain bread")}>Turkey Sandwich</button>
-                    </div>
-                    <textarea
-                      value={nutritionPlan.lunch}
-                      onChange={e => handlePlanChange("lunch", e.target.value)}
-                      rows={3}
-                      placeholder="E.g. Chicken salad, quinoa bowl, turkey sandwich..."
-                      style={{
-                        width: "100%",
-                        padding: "var(--spacing-sm)",
-                        borderRadius: "var(--radius-md)",
-                        background: "#23272f",
-                        color: "#e0eafc",
-                        border: "1px solid #414345",
-                        resize: "vertical",
-                        fontSize: "var(--font-size-base)"
-                      }}
-                      disabled={savingPlan}
-                    />
-                  </div>
-                  <div style={{ textAlign: "left"}}>
-                    <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", marginBottom: "var(--spacing-sm)" }}>
-                       <FaFish color="#60a5fa" style={{ marginRight: "var(--spacing-sm)" }} /> Dinner:
-                     </h3>
-                    <div style={{ display: "flex", gap: 8, marginBottom: 8 }}>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("dinner", "Grilled salmon with veggies")}>Salmon</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("dinner", "Stir-fried tofu and rice")}>Tofu & Rice</button>
-                      <button type="button" style={{ fontSize: "0.9em", padding: "2px 8px", borderRadius: 6, border: "1px solid #4ea8de", background: "#23272f", color: "#4ea8de", cursor: "pointer" }} onClick={() => handlePlanChange("dinner", "Chicken and steamed broccoli")}>Chicken & Broccoli</button>
-                    </div>
-                    <textarea
-                      value={nutritionPlan.dinner}
-                      onChange={e => handlePlanChange("dinner", e.target.value)}
-                      rows={3}
-                      placeholder="E.g. Salmon with veggies, tofu & rice, chicken & broccoli..."
-                      style={{
-                        width: "100%",
-                        padding: "var(--spacing-sm)",
-                        borderRadius: "var(--radius-md)",
-                        background: "#23272f",
-                        color: "#e0eafc",
-                        border: "1px solid #414345",
-                        resize: "vertical",
-                        fontSize: "var(--font-size-base)"
-                      }}
-                      disabled={savingPlan}
-                    />
-                  </div>
+                        border: "1px solid #414345"
+                      }}>
+                        <h3 style={{ fontSize: "1.1rem", color: "#e0eafc", marginBottom: "var(--spacing-sm)", textAlign: "center" }}>Total Nutritional Summary</h3>
+                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))", gap: "var(--spacing-md)" }}>
+                           <div style={{ textAlign: "center", color: "#b6c6e3" }}>
+                             <FaFire color="#f97316" style={{ marginRight: "var(--spacing-xs)" }} /> Calories: {totalNutrition.calories.toFixed(1)} kcal
+                           </div>
+                           <div style={{ textAlign: "center", color: "#b6c6e3" }}>
+                              <FaEgg color="#eab308" style={{ marginRight: "var(--spacing-xs)" }} /> Protein: {totalNutrition.protein.toFixed(1)} g
+                           </div>
+                           <div style={{ textAlign: "center", color: "#b6c6e3" }}>
+                             <FaBreadSlice color="#f59e0b" style={{ marginRight: "var(--spacing-xs)" }} /> Carbs: {totalNutrition.carbs.toFixed(1)} g
+                           </div>
+                            <div style={{ textAlign: "center", color: "#b6c6e3" }}>
+                             <FaLeaf color="#22c55e" style={{ marginRight: "var(--spacing-xs)" }} /> Fat: {totalNutrition.fat.toFixed(1)} g
+                           </div>
+                        </div>
+                      </div>
+                   )}
 
                   {feedback.message && feedback.type !== "error" && !feedback.message.includes("fetch") && (
                     <div style={{
@@ -315,79 +556,39 @@ export default function NutritionPlan() {
                   <button
                     className="btn btn-primary"
                     onClick={handleSavePlan}
-                    disabled={savingPlan}
+                    disabled={savingPlan || nutritionPlan.meals.length === 0}
                     style={{
                       fontWeight: 600,
                       fontSize: "var(--font-size-lg)",
                       padding: "var(--spacing-md) var(--spacing-xl)",
                       borderRadius: "var(--radius-md)",
-                      marginTop: "var(--spacing-sm)",
+                      marginTop: "var(--spacing-md)",
                       letterSpacing: 1,
-                      opacity: savingPlan ? 0.7 : 1,
-                      cursor: savingPlan ? "not-allowed" : "pointer"
+                      opacity: (savingPlan || nutritionPlan.meals.length === 0) ? 0.7 : 1,
+                      cursor: (savingPlan || nutritionPlan.meals.length === 0) ? "not-allowed" : "pointer"
                     }}
                   >
                      {savingPlan ? <FaSpinner className="spin" /> : <FaSave style={{ marginRight: "var(--spacing-sm)" }} />} 
                      {savingPlan ? "Saving..." : "Save Plan"}
                   </button>
+
                 </div>
               )}
 
-                <div className="fade-in">
-                 <h2 style={{ fontSize: "1.5rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
-                   <FaHistory style={{ marginRight: "var(--spacing-sm)" }} /> Plan History
-                 </h2>
-                 {planHistory.length > 0 ? (
-                   <ul style={{
-                     listStyle: "none",
-                     padding: 0,
-                     margin: 0,
-                     display: "grid",
-                     gap: "var(--spacing-md)",
-                     textAlign: "left"
-                   }}>
-                      {planHistory.map((plan, index) => (
-                         <li key={index} style={{
-                           background: "#23272f",
-                           padding: "var(--spacing-md)",
-                           borderRadius: "var(--radius-md)",
-                           border: "1px solid #414345"
-                         }}>
-                           <p style={{ fontWeight: 600, marginBottom: "var(--spacing-sm)", color: "#e0eafc" }}>
-                             Plan from {new Date(plan.date).toLocaleDateString()}:
-                           </p>
-                            <p style={{ color: "#b6c6e3", whiteSpace: "pre-wrap" }}>
-                               Breakfast: {plan.breakfast || "N/A"}\n
-                               Lunch: {plan.lunch || "N/A"}\n
-                               Dinner: {plan.dinner || "N/A"}
-                            </p>
-                         </li>
-                      ))}
-                   </ul>
-                 ) : (
-                   <div style={{ color: "#b6c6e3", textAlign: "center" }}>No plan history available.</div>
-                 )}
+                {/* Plan History Section */}
+                 <div style={{ marginTop: "var(--spacing-xl)" }}>
+                 <NutritionPlanHistory patientId={selectedPatientId} />
               </div>
             </div>
           )}
         </div>
       </div>
-      <style>
+       <style>
         {`
           @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
           }
-          .spin {
-            animation: spin 1s linear infinite;
-          }
-           select {
-              /* Add custom arrow */
-              background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%234ea8de%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E');
-              background-repeat: no-repeat;
-              background-position: right 0.75rem center;
-              background-size: 16px 12px;
-            }
         `}
       </style>
     </>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import { useNavigate } from "react-router-dom";
+import { FaUser, FaEnvelope, FaPhone, FaNotesMedical, FaAppleAlt, FaHeartbeat } from "react-icons/fa";
+import "../styles/global.css";
 
 export default function AddPatient() {
   const [name, setName] = useState("");
@@ -14,6 +16,7 @@ export default function AddPatient() {
   const [notes, setNotes] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(null);
+  const [validationErrors, setValidationErrors] = useState({});
   const navigate = useNavigate();
 
   // Dietary and medical options
@@ -42,24 +45,35 @@ export default function AddPatient() {
     );
   };
 
-  // Add these validation functions
-  const validateEmail = (email) => {
-    if (!email) return true;
-    // Only allow gmail or yahoo
-    return /^[^\s@]+@(gmail\.com|yahoo\.com)$/.test(email);
-  };
+  const validateForm = () => {
+    const errors = {};
+    
+    if (!name) {
+      errors.name = "Name is required";
+    } else if (!/^[A-Za-z\s]+$/.test(name)) {
+      errors.name = "Name must not contain numbers";
+    }
 
-  const validatePhone = (phone) => {
-    return /^\d{11}$/.test(phone);
-  };
+    if (!age) {
+      errors.age = "Age is required";
+    } else if (!/^\d+$/.test(age) || Number(age) <= 0) {
+      errors.age = "Age must be a positive number";
+    }
 
-  const validateName = (name) => {
-    // No numbers allowed
-    return /^[A-Za-z\s]+$/.test(name);
-  };
+    if (!gender) {
+      errors.gender = "Gender is required";
+    }
 
-  const validateAge = (age) => {
-    return /^\d+$/.test(age) && Number(age) > 0;
+    if (email && !/^[^\s@]+@(gmail\.com|yahoo\.com)$/.test(email)) {
+      errors.email = "Email must be a valid gmail.com or yahoo.com address";
+    }
+
+    if (phone && !/^\d{11}$/.test(phone)) {
+      errors.phone = "Phone number must be exactly 11 digits";
+    }
+
+    setValidationErrors(errors);
+    return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = async (e) => {
@@ -67,29 +81,7 @@ export default function AddPatient() {
     setError(null);
     setSubmitted(false);
 
-    if (!name || !age || !gender) {
-      setError("Name, age, and gender are required.");
-      window.alert("Name, age, and gender are required.");
-      return;
-    }
-    if (!validateName(name)) {
-      setError("Name must not contain numbers.");
-      window.alert("Name must not contain numbers.");
-      return;
-    }
-    if (!validateAge(age)) {
-      setError("Age must be a positive number.");
-      window.alert("Age must be a positive number.");
-      return;
-    }
-    if (email && !validateEmail(email)) {
-      setError("Email must be a valid gmail.com or yahoo.com address.");
-      window.alert("Email must be a valid gmail.com or yahoo.com address.");
-      return;
-    }
-    if (phone && !validatePhone(phone)) {
-      setError("Phone number must be exactly 11 digits.");
-      window.alert("Phone number must be exactly 11 digits.");
+    if (!validateForm()) {
       return;
     }
 
@@ -114,113 +106,205 @@ export default function AddPatient() {
         throw new Error(result.message || "Failed to add patient");
       }
       setSubmitted(true);
-      setTimeout(() => navigate("/patients"), 1000);
+      setTimeout(() => navigate("/patients"), 1500);
     } catch (err) {
       setError(err.message);
-      window.alert(err.message);
     }
   };
 
   return (
     <>
       <NavBar />
-      <div className="addpatient-container">
-        <h2>Add Patient</h2>
-        <form className="addpatient-form" onSubmit={handleSubmit}>
-          <input
-            className="addpatient-input"
-            value={name}
-            onChange={e => setName(e.target.value)}
-            placeholder="Name"
-            required
-          />
-          <input
-            className="addpatient-input"
-            value={age}
-            onChange={e => setAge(e.target.value)}
-            placeholder="Age"
-            type="number"
-            required
-          />
-          <select
-            className="addpatient-input"
-            value={gender}
-            onChange={e => setGender(e.target.value)}
-            required
-          >
-            <option value="">Select Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-          </select>
-          <input
-            className="addpatient-input"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Email"
-            type="email"
-          />
-          <input
-            className="addpatient-input"
-            value={phone}
-            onChange={e => setPhone(e.target.value)}
-            placeholder="Phone"
-            type="tel"
-          />
+      <div className="container" style={{ paddingTop: "var(--spacing-xl)" }}>
+        <div className="card">
+          <h1 style={{ color: "var(--primary-color)", marginBottom: "var(--spacing-xl)" }}>
+            Add New Patient
+          </h1>
 
-          <div style={{ margin: "1rem 0" }}>
-            <label><strong>Dietary Restrictions:</strong></label>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {DIETARY_OPTIONS.map(option => (
-                <label key={option} style={{ minWidth: "120px" }}>
+          <form onSubmit={handleSubmit} style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--spacing-lg)"
+          }}>
+            {/* Basic Information Section */}
+            <div className="form-section">
+              <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
+                <FaUser style={{ marginRight: "var(--spacing-sm)" }} /> Basic Information
+              </h2>
+              <div style={{ display: "grid", gap: "var(--spacing-md)" }}>
+                <div>
                   <input
-                    type="checkbox"
-                    checked={dietaryRestrictions.includes(option)}
-                    onChange={() => handleDietaryChange(option)}
-                  />{" "}
-                  {option}
-                </label>
-              ))}
+                    className={`form-input ${validationErrors.name ? 'error' : ''}`}
+                    value={name}
+                    onChange={e => setName(e.target.value)}
+                    placeholder="Full Name"
+                    required
+                  />
+                  {validationErrors.name && (
+                    <div className="error-message">{validationErrors.name}</div>
+                  )}
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--spacing-md)" }}>
+                  <div>
+                    <input
+                      className={`form-input ${validationErrors.age ? 'error' : ''}`}
+                      value={age}
+                      onChange={e => setAge(e.target.value)}
+                      placeholder="Age"
+                      type="number"
+                      min="0"
+                      required
+                    />
+                    {validationErrors.age && (
+                      <div className="error-message">{validationErrors.age}</div>
+                    )}
+                  </div>
+
+                  <div>
+                    <select
+                      className={`form-input ${validationErrors.gender ? 'error' : ''}`}
+                      value={gender}
+                      onChange={e => setGender(e.target.value)}
+                      required
+                    >
+                      <option value="">Select Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                    {validationErrors.gender && (
+                      <div className="error-message">{validationErrors.gender}</div>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <select
-            className="addpatient-input"
-            value={physicalActivityLevel}
-            onChange={e => setPhysicalActivityLevel(e.target.value)}
-          >
-            <option value="">Physical Activity Level</option>
-            <option value="Low">Low</option>
-            <option value="Moderate">Moderate</option>
-            <option value="High">High</option>
-          </select>
-
-          <div style={{ margin: "1rem 0" }}>
-            <label><strong>Medical Conditions:</strong></label>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-              {MEDICAL_OPTIONS.map(option => (
-                <label key={option} style={{ minWidth: "140px" }}>
+            {/* Contact Information Section */}
+            <div className="form-section">
+              <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
+                <FaEnvelope style={{ marginRight: "var(--spacing-sm)" }} /> Contact Information
+              </h2>
+              <div style={{ display: "grid", gap: "var(--spacing-md)" }}>
+                <div>
                   <input
-                    type="checkbox"
-                    checked={medicalConditions.includes(option)}
-                    onChange={() => handleMedicalChange(option)}
-                  />{" "}
-                  {option}
-                </label>
-              ))}
-            </div>
-          </div>
+                    className={`form-input ${validationErrors.email ? 'error' : ''}`}
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="Email (gmail.com or yahoo.com)"
+                    type="email"
+                  />
+                  {validationErrors.email && (
+                    <div className="error-message">{validationErrors.email}</div>
+                  )}
+                </div>
 
-          <textarea
-            className="addpatient-input"
-            value={notes}
-            onChange={e => setNotes(e.target.value)}
-            placeholder="Notes"
-            rows={2}
-          />
-          <button className="addpatient-btn" type="submit">Add</button>
-        </form>
-        {submitted && <div className="addpatient-success">Patient "{name}" added!</div>}
-        {error && <div style={{ color: "red" }}>{error}</div>}
+                <div>
+                  <input
+                    className={`form-input ${validationErrors.phone ? 'error' : ''}`}
+                    value={phone}
+                    onChange={e => setPhone(e.target.value)}
+                    placeholder="Phone Number (11 digits)"
+                    type="tel"
+                  />
+                  {validationErrors.phone && (
+                    <div className="error-message">{validationErrors.phone}</div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Health Information Section */}
+            <div className="form-section">
+              <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
+                <FaAppleAlt style={{ marginRight: "var(--spacing-sm)" }} /> Dietary Information
+              </h2>
+              <div style={{ marginBottom: "var(--spacing-md)" }}>
+                <select
+                  className="form-input"
+                  value={physicalActivityLevel}
+                  onChange={e => setPhysicalActivityLevel(e.target.value)}
+                >
+                  <option value="">Physical Activity Level</option>
+                  <option value="Low">Low</option>
+                  <option value="Moderate">Moderate</option>
+                  <option value="High">High</option>
+                </select>
+              </div>
+
+              <div style={{ marginBottom: "var(--spacing-md)" }}>
+                <label style={{ display: "block", marginBottom: "var(--spacing-sm)", color: "#e0eafc" }}>
+                  Dietary Restrictions:
+                </label>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "var(--spacing-sm)" }}>
+                  {DIETARY_OPTIONS.map(option => (
+                    <label key={option} className="checkbox-label">
+                      <input
+                        type="checkbox"
+                        checked={dietaryRestrictions.includes(option)}
+                        onChange={() => handleDietaryChange(option)}
+                      />
+                      <span>{option}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Medical Information Section */}
+            <div className="form-section">
+              <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
+                <FaHeartbeat style={{ marginRight: "var(--spacing-sm)" }} /> Medical Information
+              </h2>
+              <div style={{ marginBottom: "var(--spacing-md)" }}>
+                <label style={{ display: "block", marginBottom: "var(--spacing-sm)", color: "#e0eafc" }}>
+                  Medical Conditions:
+                </label>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "var(--spacing-sm)" }}>
+                  {MEDICAL_OPTIONS.map(option => (
+                    <label key={option} className="checkbox-label">
+                      <input
+                        type="checkbox"
+                        checked={medicalConditions.includes(option)}
+                        onChange={() => handleMedicalChange(option)}
+                      />
+                      <span>{option}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Notes Section */}
+            <div className="form-section">
+              <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-md)" }}>
+                <FaNotesMedical style={{ marginRight: "var(--spacing-sm)" }} /> Additional Notes
+              </h2>
+              <textarea
+                className="form-input"
+                value={notes}
+                onChange={e => setNotes(e.target.value)}
+                placeholder="Additional notes or comments"
+                rows={4}
+              />
+            </div>
+
+            <button className="btn btn-primary" type="submit" style={{ marginTop: "var(--spacing-lg)" }}>
+              Add Patient
+            </button>
+
+            {submitted && (
+              <div className="success-message">
+                Patient "{name}" added successfully! Redirecting...
+              </div>
+            )}
+            {error && (
+              <div className="error-message">
+                {error}
+              </div>
+            )}
+          </form>
+        </div>
       </div>
     </>
   );

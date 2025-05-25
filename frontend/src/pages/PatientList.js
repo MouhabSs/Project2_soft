@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./NavBar";
-import { FaSearch, FaUserEdit, FaEye, FaPlus, FaSpinner } from "react-icons/fa";
+import { FaSearch, FaUserEdit, FaEye, FaPlus, FaSpinner, FaFilter } from "react-icons/fa";
 import "../styles/global.css";
 
 export default function PatientList() {
@@ -9,31 +9,64 @@ export default function PatientList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState("");
+  // State for filters
+  const [ageFilter, setAgeFilter] = useState("");
+  const [genderFilter, setGenderFilter] = useState("");
+  const [medicalConditionsFilter, setMedicalConditionsFilter] = useState([]);
+
+  // Medical options (copying from AddPatient for consistency)
+  const MEDICAL_OPTIONS = [
+    "Diabetes", "Hypertension", "High Cholesterol", "Obesity",
+    "Celiac Disease", "Thyroid Disorder", "Kidney Disease", "Other"
+  ];
 
   useEffect(() => {
-    fetch("/api/patients")
-      .then(res => {
+    const fetchPatients = async () => {
+      setLoading(true);
+      setError(null);
+
+      try {
+        const res = await fetch("/api/patients");
         if (!res.ok) {
           throw new Error("Failed to fetch patients");
         }
-        return res.json();
-      })
-      .then(result => {
+        const result = await res.json();
         if (!result.success) {
           throw new Error(result.message || "Failed to fetch patients");
         }
         setPatients(result.data);
-        setLoading(false);
-      })
-      .catch(err => {
+      } catch (err) {
         setError(err.message);
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    fetchPatients();
   }, []);
 
-  // Alphabetical sort and search filter
+  // Handle medical conditions checkbox change
+  const handleMedicalConditionChange = (condition) => {
+    setMedicalConditionsFilter(prev =>
+      prev.includes(condition)
+        ? prev.filter(item => item !== condition)
+        : [...prev, condition]
+    );
+  };
+
+  // Filter patients based on search and other filters
   const filteredPatients = patients
-    .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
+    .filter(patient => {
+      const matchesSearch = patient.name.toLowerCase().includes(search.toLowerCase());
+      const matchesAge = !ageFilter || patient.age.toString() === ageFilter;
+      const matchesGender = !genderFilter || patient.gender === genderFilter;
+      const matchesConditions = medicalConditionsFilter.length === 0 || 
+        medicalConditionsFilter.some(condition => 
+          patient.medicalConditions?.includes(condition)
+        );
+      
+      return matchesSearch && matchesAge && matchesGender && matchesConditions;
+    })
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
@@ -57,28 +90,99 @@ export default function PatientList() {
             </Link>
           </div>
 
+          {/* Search and Filter Section */}
           <div style={{
-            position: "relative",
-            marginBottom: "var(--spacing-xl)"
+            marginBottom: "var(--spacing-xl)",
+            background: "#2c2f36",
+            padding: "var(--spacing-md)",
+            borderRadius: "var(--radius-md)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "var(--spacing-md)"
           }}>
-            <FaSearch style={{
-              position: "absolute",
-              left: "var(--spacing-md)",
-              top: "50%",
-              transform: "translateY(-50%)",
-              color: "var(--text-secondary)"
-            }} />
-            <input
-              type="text"
-              placeholder="Search patients by name..."
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              style={{
-                paddingLeft: "calc(var(--spacing-md) * 2 + 16px)",
-                width: "100%"
-              }}
-              aria-label="Search patients by name"
-            />
+            <h2 style={{ fontSize: "1.2rem", color: "#e0eafc", marginBottom: "var(--spacing-sm)" }}>
+              <FaFilter style={{ marginRight: "var(--spacing-sm)" }} /> Filters
+            </h2>
+            {/* Search Input */}
+            <div style={{ position: "relative" }}>
+              <FaSearch style={{
+                position: "absolute",
+                left: "var(--spacing-md)",
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "var(--text-secondary)"
+              }} />
+              <input
+                type="text"
+                placeholder="Search patients by name..."
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                style={{
+                  paddingLeft: "calc(var(--spacing-md) * 2 + 16px)",
+                  width: "100%"
+                }}
+                aria-label="Search patients by name"
+              />
+            </div>
+
+            {/* Age and Gender Filters */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--spacing-md)" }}>
+              <div>
+                <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Age Filter:</label>
+                <input
+                  type="number"
+                  value={ageFilter}
+                  onChange={e => setAgeFilter(e.target.value)}
+                  placeholder="Enter age"
+                  style={{
+                    width: "100%",
+                    padding: "var(--spacing-sm)",
+                    borderRadius: "var(--radius-md)",
+                    background: "#23272f",
+                    color: "#e0eafc",
+                    border: "1px solid #414345",
+                    fontSize: "var(--font-size-base)"
+                  }}
+                />
+              </div>
+              <div>
+                <label style={{ display: "block", marginBottom: "var(--spacing-xs)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Gender:</label>
+                <select
+                  value={genderFilter}
+                  onChange={e => setGenderFilter(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "var(--spacing-sm)",
+                    borderRadius: "var(--radius-md)",
+                    background: "#23272f",
+                    color: "#e0eafc",
+                    border: "1px solid #414345",
+                    fontSize: "var(--font-size-base)"
+                  }}
+                >
+                  <option value="">All Genders</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Medical Conditions Filter */}
+            <div>
+              <label style={{ display: "block", marginBottom: "var(--spacing-sm)", color: "#b6c6e3", fontSize: "var(--font-size-sm)" }}>Medical Conditions (select multiple):</label>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "var(--spacing-sm)" }}>
+                {MEDICAL_OPTIONS.map(condition => (
+                  <label key={condition} className="checkbox-label" style={{fontSize: "var(--font-size-sm)", color: "var(--text-primary)"}}>
+                    <input
+                      type="checkbox"
+                      checked={medicalConditionsFilter.includes(condition)}
+                      onChange={() => handleMedicalConditionChange(condition)}
+                    />
+                    <span>{condition}</span>
+                  </label>
+                ))}
+              </div>
+            </div>
           </div>
 
           {loading ? (
@@ -108,7 +212,7 @@ export default function PatientList() {
               padding: "var(--spacing-xl)",
               color: "var(--text-secondary)"
             }}>
-              No patients found.
+              No patients found matching your criteria.
             </div>
           ) : (
             <div style={{
@@ -130,6 +234,20 @@ export default function PatientList() {
                         margin: "var(--spacing-xs) 0 0 0"
                       }}>
                         {patient.email}
+                      </p>
+                    )}
+                    <p style={{
+                      color: "var(--text-secondary)",
+                      margin: "var(--spacing-xs) 0 0 0"
+                    }}>
+                      Age: {patient.age}, Gender: {patient.gender}
+                    </p>
+                    {patient.medicalConditions && patient.medicalConditions.length > 0 && (
+                      <p style={{
+                        color: "var(--text-secondary)",
+                        margin: "var(--spacing-xs) 0 0 0"
+                      }}>
+                        Conditions: {patient.medicalConditions.join(", ")}
                       </p>
                     )}
                   </div>
