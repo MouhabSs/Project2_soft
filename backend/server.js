@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import patientRoutes from "./routes/patientRoutes.js";
 import appointmentRoutes from "./routes/appointmentRoutes.js";
 import nutritionPlanRoutes from "./routes/nutritionPlanRoutes.js";
+import nutritionPlanHistoryRoutes from "./routes/nutritionPlanHistoryRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 import cors from "cors";
 
 dotenv.config();
@@ -26,6 +28,8 @@ mongoose.connect(process.env.MONGODB_URI, {
 app.use("/api/patients", patientRoutes);
 app.use("/api/appointments", appointmentRoutes);
 app.use("/api/nutrition-plans", nutritionPlanRoutes);
+app.use("/api/nutrition-plan-history", nutritionPlanHistoryRoutes);
+app.use("/api/messages", messageRoutes);
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500).json({ error: err.message || "Server Error" });
