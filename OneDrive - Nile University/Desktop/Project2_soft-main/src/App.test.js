@@ -1,0 +1,6 @@
+// ... existing code ...
+jest.mock('./auth/AuthProvider', () => ({
+  useAuth: () => ({
+    isAuthenticated: true, // or false, depending on your test scenario
+  }),
+}));// ... existing code ...
