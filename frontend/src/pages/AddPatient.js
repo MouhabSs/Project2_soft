@@ -56,20 +56,28 @@ export default function AddPatient() {
 
     if (!age) {
       errors.age = "Age is required";
-    } else if (!/^\d+$/.test(age) || Number(age) <= 0) {
-      errors.age = "Age must be a positive number";
+    } else if (!/^\d+$/.test(age) || Number(age) < 3 || Number(age) > 100) {
+      errors.age = "Age must be between 3 and 100 years";
     }
 
     if (!gender) {
       errors.gender = "Gender is required";
     }
 
-    if (email && !/^[^\s@]+@(gmail\.com|yahoo\.com)$/.test(email)) {
+    if (!email) {
+      errors.email = "Email is required";
+    } else if (!/^[^\s@]+@(gmail\.com|yahoo\.com)$/.test(email)) {
       errors.email = "Email must be a valid gmail.com or yahoo.com address";
     }
 
-    if (phone && !/^\d{11}$/.test(phone)) {
+    if (!phone) {
+      errors.phone = "Phone number is required";
+    } else if (!/^\d{11}$/.test(phone)) {
       errors.phone = "Phone number must be exactly 11 digits";
+    }
+
+    if (!physicalActivityLevel) {
+      errors.physicalActivityLevel = "Physical activity level is required";
     }
 
     setValidationErrors(errors);

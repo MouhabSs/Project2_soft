@@ -43,31 +43,53 @@ export default function Dashboard() {
           return aptDate.toDateString() === today.toDateString();
         }).length;
 
-        // Calculate weekly data
-        const weekData = Array(7).fill().map((_, i) => {
+        // Calculate monthly data
+        const monthData = Array(12).fill().map((_, i) => {
           const date = new Date();
-          date.setDate(today.getDate() - 6 + i);
-          const dayName = date.toLocaleDateString('en-US', { weekday: 'short' });
+          date.setMonth(date.getMonth() - 11 + i);
+          const monthName = date.toLocaleDateString('en-US', { month: 'short' });
           
-          const dayAppointments = appointmentsData.filter(apt => {
+          const monthAppointments = appointmentsData.filter(apt => {
             const aptDate = new Date(apt.date);
-            return aptDate.toDateString() === date.toDateString();
+            return aptDate.getMonth() === date.getMonth() && 
+                   aptDate.getFullYear() === date.getFullYear();
           });
 
+          const monthPatients = patientsData.data.filter(patient => {
+            const patientDate = new Date(patient.createdAt);
+            return patientDate.getMonth() === date.getMonth() && 
+                   patientDate.getFullYear() === date.getFullYear();
+          }).length;
+
           return {
-            name: dayName,
-            Patients: patientsData.data.length,
-            Appointments: dayAppointments.length
+            name: monthName,
+            Patients: monthPatients,
+            Appointments: monthAppointments.length
           };
         });
 
-        setStats({
-          totalPatients: patientsData.data.length,
-          appointmentsToday,
-          activeUsers: patientsData.data.length // Using total patients as active users for now
-        });
+        // Calculate patients added this month
+const monthStart = new Date();
+monthStart.setMonth(monthStart.getMonth() - 1);
+const patientsThisMonth = patientsData.data.filter(patient => 
+  new Date(patient.createdAt) >= monthStart
+).length;
 
-        setChartData(weekData);
+// Calculate appointments this month
+const appointmentsThisMonth = appointmentsData.filter(apt => {
+  const aptDate = new Date(apt.date);
+  return aptDate >= monthStart;
+}).length;
+
+setStats({
+  totalPatients: patientsData.data.length,
+  appointmentsToday,
+  activeUsers: 1, // Only 1 user (the nutritionist)
+  patientsThisMonth,
+  appointmentsThisMonth
+});
+
+        setChartData(monthData);
       } catch (err) {
         setError(err.message);
       } finally {
@@ -147,8 +169,16 @@ export default function Dashboard() {
           <div className="stat-card">
             <FaUser className="stat-icon" />
             <div className="stat-content">
-              <h3>Active Users</h3>
-              <p>{stats.activeUsers}</p>
+              <h3>Patients Added This Week</h3>
+              <p>{stats.patientsThisWeek}</p>
+            </div>
+          </div>
+
+          <div className="stat-card">
+            <FaCalendarAlt className="stat-icon" />
+            <div className="stat-content">
+              <h3>Appointments This Month</h3>
+          <p>{stats.appointmentsThisMonth}</p>
             </div>
           </div>
         </div>
@@ -203,7 +233,7 @@ export default function Dashboard() {
         {/* Weekly Chart */}
         <div style={{ background: "#20232a", borderRadius: 14, boxShadow: "0 2px 8px rgba(0,0,0,0.12)", padding: "1.5rem 1rem" }}>
           <div style={{ fontSize: 20, fontWeight: 600, color: "#e0eafc" }}>Weekly Overview</div>
-          <div style={{ color: "#b6c6e3", fontSize: 15 }}>Patient and appointment trends for the week.</div>
+          <div style={{ color: "#b6c6e3", fontSize: 15 }}>Patient and appointment trends for the last 12 months.</div>
           <div style={{ marginTop: 16, background: "#232b36", borderRadius: 12, padding: 12 }}>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
