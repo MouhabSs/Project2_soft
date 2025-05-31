@@ -1,0 +1,83 @@
+.medication-list-page {
+  /* Styles for the medication list page container */
+}
+
+.medication-list {
+  /* Styles for the medication list container */
+}
+
+.medication-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.medication-item p {
+  margin-bottom: 8px;
+}
+
+.medication-item strong {
+  display: inline-block;
+  width: 120px; /* Adjust for alignment */
+}
+
+/* Styles for the Add Medication Form (similar to Add Stock form) */
+.add-medication-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.add-medication-form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.add-medication-form form div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.add-medication-form label {
+  display: block;
+  margin-bottom: 0;
+  margin-right: 10px;
+  font-weight: bold;
+  width: 150px; /* Adjust width for labels */
+  flex-shrink: 0;
+}
+
+.add-medication-form input[type="text"],
+.add-medication-form input[type="number"],
+.add-medication-form input[type="date"],
+.add-medication-form select {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.add-medication-form button[type="submit"] {
+  background-color: #007bff; /* Blue color for Add Medication button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.add-medication-form button[type="submit"]:hover {
+  background-color: #0056b3;
+} 

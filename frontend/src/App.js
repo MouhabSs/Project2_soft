@@ -45,6 +45,7 @@ import Messages from "./pages/Messages";
 import Settings from "./pages/Settings";
 import { useAuth } from "./auth/AuthProvider";
 import Notifications from "./components/Notifications";
+import SendMedicationRequestPage from "./pages/SendMedicationRequestPage";
 
 const drawerWidth = 240;
 
@@ -116,6 +117,7 @@ const menuItems = [
   { text: "Reports", icon: <AssessmentIcon />, path: "/reports" },
   { text: "Messages", icon: <MessageIcon />, path: "/messages" },
   { text: "Settings", icon: <SettingsIcon />, path: "/settings" },
+  { text: "Send Med Request", icon: <MessageIcon />, path: "/send-medication-request" },
 ];
 
 function PrivateRoute({ children }) {
@@ -384,6 +386,16 @@ function App() {
               <PrivateRoute>
                 <Layout>
                   <Settings />
+                </Layout>
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/send-medication-request"
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <SendMedicationRequestPage />
                 </Layout>
               </PrivateRoute>
             }
