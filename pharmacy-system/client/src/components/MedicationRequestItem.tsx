@@ -34,6 +34,7 @@ interface MedicationRequest {
     display: string;
   };
   medicationRef?: Medication; // Populated internal Medication object
+  medicationDisplayString?: string; // New field to store display text from codeableConcept
   subject?: {
     reference: string;
     display: string;
@@ -85,7 +86,7 @@ const MedicationRequestItem: React.FC<MedicationRequestItemProps> = ({ request, 
       </div>
       <div className="request-details">
         <p><strong>Intent:</strong> {request.intent || 'N/A'}</p>
-        <p><strong>Medication:</strong> {request.medicationRef?.name || request.medicationRef?.code?.coding?.[0]?.display || request.medicationReference?.display || 'N/A'} {request.medicationRef && `(Internal ID: ${request.medicationRef._id})`}</p>
+        <p><strong>Medication:</strong> {request.medicationDisplayString || request.medicationRef?.name || request.medicationRef?.code?.coding?.[0]?.display || request.medicationReference?.display || 'N/A'} {request.medicationRef && `(Internal ID: ${request.medicationRef._id})`}</p>
         <p><strong>Subject (Patient):</strong> {displayPatientName()} {request.patientRef && `(Internal ID: ${request.patientRef._id})`}</p>
         <p><strong>Requester:</strong> {request.requester?.display || 'N/A'}</p>
         <p><strong>Dosage:</strong> {request.dosageInstruction?.[0]?.text || 'N/A'}</p>

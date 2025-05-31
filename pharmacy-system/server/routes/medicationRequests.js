@@ -32,6 +32,8 @@ router.post('/fhir/MedicationRequest', async (req, res) => {
       subject: fhirMedicationRequest.subject,
       requester: fhirMedicationRequest.requester,
       dosageInstruction: fhirMedicationRequest.dosageInstruction,
+      // Extract medication display from codeableConcept if available
+      medicationDisplayString: fhirMedicationRequest.medicationCodeableConcept?.display || fhirMedicationRequest.medicationCodeableConcept?.coding?.[0]?.display,
     });
 
     // Attempt to find and link the internal Patient record
@@ -47,19 +49,30 @@ router.post('/fhir/MedicationRequest', async (req, res) => {
         }
     }
 
-    // Attempt to find and link the internal Medication record
-    if (fhirMedicationRequest.medicationReference?.reference) {
+    // Attempt to find and link the internal Medication record using codeableConcept
+    const medicationCoding = fhirMedicationRequest.medicationCodeableConcept?.coding?.[0];
+    if (medicationCoding?.system && medicationCoding?.code) {
+        const medication = await Medication.findOne({
+            'code.coding': { $elemMatch: { system: medicationCoding.system, code: medicationCoding.code } }
+        });
+        if (medication) {
+            newMedicationRequest.medicationRef = medication._id; // Link to internal Medication document
+            console.log(`Linked MedicationRequest to internal Medication with ID: ${medication._id} using codeableConcept`);
+        } else {
+            console.warn(`No internal Medication found with system: ${medicationCoding.system} and code: ${medicationCoding.code}. MedicationRequest will not be linked to a medication.`);
+            // In a real system, you might want to create a new minimal medication record here or queue for manual linking
+        }
+    } else if (fhirMedicationRequest.medicationReference?.reference) {
+        // Fallback to linking by medicationReference if codeableConcept is not available
         const medicationFhirId = fhirMedicationRequest.medicationReference.reference.split('/')[1]; // Extract FHIR ID from reference string
          const medication = await Medication.findOne({ fhirId: medicationFhirId });
         if (medication) {
             newMedicationRequest.medicationRef = medication._id; // Link to internal Medication document
-            console.log(`Linked MedicationRequest to internal Medication with ID: ${medication._id}`);
+            console.log(`Linked MedicationRequest to internal Medication with ID: ${medication._id} using medicationReference`);
         } else {
             console.warn(`No internal Medication found with FHIR ID: ${medicationFhirId}. MedicationRequest will not be linked to a medication.`);
-             // In a real system, you might want to create a new minimal medication record here or queue for manual linking
         }
     }
-
 
     await newMedicationRequest.save();
 
@@ -73,12 +86,32 @@ router.post('/fhir/MedicationRequest', async (req, res) => {
 // Route to get all MedicationRequests (update to populate linked refs)
 router.get('/medication-requests', async (req, res) => {
   try {
-    const medicationRequests = await MedicationRequest.find()
+    const { status, startDate, endDate } = req.query;
+    const filter = {};
+
+    if (status) {
+      filter.status = status;
+    }
+
+    if (startDate || endDate) {
+      filter.authoredOn = {}; // Assuming a field like 'authoredOn' exists or can be added to the schema
+      if (startDate) {
+        filter.authoredOn.$gte = new Date(startDate);
+      }
+      if (endDate) {
+        filter.authoredOn.$lte = new Date(endDate);
+      }
+    }
+
+    // Add filter to find query
+    const medicationRequests = await MedicationRequest.find(filter)
         .populate('patientRef') // Populate linked patient details
         .populate('medicationRef'); // Populate linked medication details
+    
     res.status(200).json(medicationRequests);
   } catch (error) {
     console.error('Error fetching medication requests:', error);
+    console.error('Full error fetching medication requests:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 });
@@ -87,6 +120,7 @@ router.get('/medication-requests', async (req, res) => {
 router.post('/medication-requests/dispense/:id', async (req, res) => {
   try {
     console.log(`Attempting to dispense medication request with ID: ${req.params.id}`);
+    // Populate both medicationRef and patientRef for full context if needed later, though medicationRef is key for inventory
     const medicationRequest = await MedicationRequest.findById(req.params.id).populate('medicationRef');
 
     if (!medicationRequest) {
@@ -99,6 +133,8 @@ router.post('/medication-requests/dispense/:id', async (req, res) => {
       console.warn(`Medication Request with ID: ${req.params.id} is not linked to an internal medication. Cannot dispense.`);
       return res.status(400).json({ message: 'Medication Request not linked to a medication.' });
     }
+
+    console.log(`Looking for inventory item for Medication ID: ${medicationRequest.medicationRef._id}`);
     const inventoryItem = await InventoryItem.findOne({ medication: medicationRequest.medicationRef._id });
 
     if (!inventoryItem || inventoryItem.quantity <= 0) {
@@ -118,6 +154,7 @@ router.post('/medication-requests/dispense/:id', async (req, res) => {
     res.json({ message: 'Medication dispensed successfully', medicationRequest });
   } catch (err) {
     console.error('Error dispensing medication:', err);
+    console.error('Full error dispensing medication:', err);
     res.status(500).json({ message: err.message });
   }
 });

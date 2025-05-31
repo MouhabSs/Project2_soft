@@ -13,14 +13,45 @@ router.get('/medications', async (req, res) => {
   }
 });
 
-// Route to add a new medication
-router.post('/medications', async (req, res) => {
+// POST route to add a new medication
+router.post('/', async (req, res) => {
   try {
-    const newMedication = new Medication(req.body);
+    const { name, code, system, fhirId } = req.body;
+
+    // Basic validation
+    if (!name || !code || !system) {
+      return res.status(400).json({ message: 'Medication name, code, and system are required.' });
+    }
+
+    // Check if medication with this code and system already exists
+    const existingMedication = await Medication.findOne({
+      'code.coding': { $elemMatch: { code: code, system: system } }
+    });
+
+    if (existingMedication) {
+      return res.status(409).json({ message: `Medication with code ${code} and system ${system} already exists.` });
+    }
+
+    const newMedication = new Medication({
+      fhirId: fhirId, // Optional: if a FHIR ID is provided
+      name: name,
+      code: {
+        coding: [
+          {
+            system: system,
+            code: code,
+            display: name // Use the name as display for simplicity
+          }
+        ]
+      }
+    });
+
     await newMedication.save();
+
     res.status(201).json({ message: 'Medication added successfully', medication: newMedication });
   } catch (error) {
-    console.error('Error adding medication:', error);
+    console.error('Error adding medication', { name, code, system, fhirId }, ':', error);
+    console.error('Full error object:', error);
     res.status(500).json({ message: 'Internal server error' });
   }
 });
