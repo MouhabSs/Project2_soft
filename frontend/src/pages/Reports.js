@@ -256,16 +256,50 @@ export default function Reports() {
             }}>
                <div style={{ fontSize: "var(--font-size-xl)", fontWeight: 600, color: "var(--text-primary)" }}>Monthly Patient Trends</div>
                <div style={{ color: "var(--text-secondary)", fontSize: "var(--font-size-base)", marginBottom: "var(--spacing-md)" }}>Patient growth and new registrations over time.</div>
-                <div style={{ background: "#232b36", borderRadius: "var(--radius-md)", padding: "var(--spacing-md)" }}>
-                  <ResponsiveContainer width="100%" height={180}>
-                    <BarChart data={patientChartData} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-                      <XAxis dataKey="name" stroke="#aaa" />
-                      <YAxis stroke="#aaa" />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="Patients" fill="var(--primary-color)" radius={[8,8,0,0]} />
-                      <Bar dataKey="New" fill="var(--success-color)" radius={[8,8,0,0]} />
+                <div style={{ background: "var(--background-secondary)", borderRadius: "var(--radius-md)", padding: "var(--spacing-md)" }}>
+                  <ResponsiveContainer width="100%" height={220}>
+                    <BarChart 
+                      data={patientChartData} 
+                      margin={{ top: 20, right: 20, left: 20, bottom: 20 }}
+                      barSize={20}
+                    >
+                      <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
+                      <XAxis 
+                        dataKey="name" 
+                        stroke="var(--text-secondary)"
+                        tick={{ fontSize: "var(--font-size-sm)" }}
+                        tickMargin={10}
+                      />
+                      <YAxis 
+                        stroke="var(--text-secondary)"
+                        tick={{ fontSize: "var(--font-size-sm)" }}
+                        tickFormatter={(value) => value.toLocaleString()}
+                      />
+                      <Tooltip 
+                        contentStyle={{ 
+                          background: "var(--background-primary)",
+                          borderColor: "var(--border-color)",
+                          borderRadius: "var(--radius-md)",
+                          boxShadow: "var(--shadow-md)"
+                        }}
+                        formatter={(value) => [value.toLocaleString(), value === 1 ? "Patient" : "Patients"]}
+                        labelFormatter={(label) => `Month: ${label}`}
+                      />
+                      <Legend 
+                        wrapperStyle={{ paddingTop: "var(--spacing-md)" }}
+                      />
+                      <Bar 
+                        dataKey="Patients" 
+                        name="Total Patients"
+                        fill="var(--primary-color)" 
+                        radius={[4,4,0,0]} 
+                      />
+                      <Bar 
+                        dataKey="New" 
+                        name="New Patients"
+                        fill="var(--success-color)" 
+                        radius={[4,4,0,0]} 
+                      />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>

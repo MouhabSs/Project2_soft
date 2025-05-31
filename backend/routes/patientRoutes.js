@@ -155,19 +155,39 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
-// DELETE /api/patients/:id - Delete patient
+// DELETE /api/patients/:id - Mark patient as 'Unknown Patient' and keep record
 router.delete("/:id", async (req, res, next) => {
   try {
-    const patient = await Patient.findByIdAndDelete(req.params.id);
+    // Update all appointments for this patient to show 'Unknown Patient'
+    await Appointment.updateMany(
+      { patientId: req.params.id },
+      { $set: { patientName: "Unknown Patient" } }
+    );
+    
+    // Mark patient as inactive instead of deleting
+    const patient = await Patient.findByIdAndUpdate(
+      req.params.id,
+      { 
+        $set: { 
+          name: "Unknown Patient",
+          active: false,
+          email: "",
+          phone: ""
+        }
+      },
+      { new: true }
+    );
+    
     if (!patient) {
       return res.status(404).json({
         success: false,
         message: "Patient not found"
       });
     }
+    
     res.json({
       success: true,
-      message: "Patient deleted successfully"
+      message: "Patient marked as inactive and appointments updated"
     });
   } catch (err) {
     next(err);

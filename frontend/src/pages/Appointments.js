@@ -22,7 +22,7 @@ export default function Appointments() {
   const [success, setSuccess] = useState("");
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [notes, setNotes] = useState("");
-  const [activeTab, setActiveTab] = useState("schedule"); // "schedule" or "view"
+  const [activeTab, setActiveTab] = useState("schedule"); // "schedule", "view", or "passed"
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -68,10 +68,6 @@ export default function Appointments() {
       setError("All fields are required.");
       return;
     }
-    if (date <= today) {
-      setError("Appointment date must be after today.");
-      return;
-    }
 
     try {
       const res = await fetch("/api/appointments", {
@@ -111,6 +107,12 @@ export default function Appointments() {
               onClick={() => setActiveTab("view")}
             >
               View Appointments
+            </button>
+            <button
+              className={`tab ${activeTab === "passed" ? "active" : ""}`}
+              onClick={() => setActiveTab("passed")}
+            >
+              Passed Appointments
             </button>
           </div>
 
@@ -275,6 +277,12 @@ export default function Appointments() {
                   onClick={() => setActiveTab("week")}
                 >
                   This Week
+                </button>
+                <button
+                  className={`tab ${activeTab === "passed" ? "active" : ""}`}
+                  onClick={() => setActiveTab("passed")}
+                >
+                  Passed Appointments
                 </button>
               </div>
               <AppointmentList view={activeTab} />

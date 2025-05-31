@@ -1,0 +1,85 @@
+.medication-request-list-page {
+  padding: 20px;
+}
+
+.medication-request-list h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.medication-requests-list {
+  display: grid;
+  gap: 20px;
+}
+
+.medication-request-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.medication-request-item:hover {
+  border-color: #007bff;
+}
+
+.medication-request-item.dispensed {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.medication-request-item.active {
+    background-color: #fff3cd;
+    border-color: #ffc107;
+}
+
+.request-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.request-id strong,
+.request-status strong {
+  margin-right: 5px;
+}
+
+.request-details p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.request-details strong {
+  display: inline-block;
+  width: 120px; /* Adjust as needed for alignment */
+}
+
+.request-actions {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.dispense-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.dispense-button:hover {
+  background-color: #0056b3;
+}
+
+.dispense-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Add styles for a potential Remove button here later if needed */ 

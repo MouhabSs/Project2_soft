@@ -1,0 +1,83 @@
+.patient-list-page {
+  /* Styles for the patient list page container */
+}
+
+.patient-list {
+  /* Styles for the patient list container */
+}
+
+.patient-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: left;
+}
+
+.patient-item p {
+  margin-bottom: 8px;
+}
+
+.patient-item strong {
+  display: inline-block;
+  width: 120px; /* Adjust for alignment */
+}
+
+/* Styles for the Add Patient Form (similar to other forms) */
+.add-patient-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.add-patient-form h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.add-patient-form form div {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.add-patient-form label {
+  display: block;
+  margin-bottom: 0;
+  margin-right: 10px;
+  font-weight: bold;
+  width: 150px; /* Adjust width for labels */
+  flex-shrink: 0;
+}
+
+.add-patient-form input[type="text"],
+.add-patient-form input[type="number"],
+.add-patient-form input[type="date"],
+.add-patient-form select {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: auto;
+}
+
+.add-patient-form button[type="submit"] {
+  background-color: #ffc107; /* Yellowish color for Add Patient button */
+  color: black;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.add-patient-form button[type="submit"]:hover {
+  background-color: #e0a800;
+} 

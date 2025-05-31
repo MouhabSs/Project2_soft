@@ -48,12 +48,53 @@ router.put("/:id", async (req, res, next) => {
   }
 });
 
-// DELETE /api/appointments/:id
+// DELETE /api/appointments/:id - Mark as cancelled instead of deleting
 router.delete("/:id", async (req, res, next) => {
   try {
-    const appointment = await Appointment.findByIdAndDelete(req.params.id);
+    const appointment = await Appointment.findByIdAndUpdate(
+      req.params.id,
+      { status: "cancelled", cancelledAt: new Date() },
+      { new: true }
+    );
     if (!appointment) return res.status(404).json({ error: "Appointment not found" });
-    res.json({ message: "Appointment deleted" });
+    res.json({ message: "Appointment cancelled", appointment });
+  } catch (err) {
+    next(err);
+  }
+});
+
+// GET /api/appointments/cancelled - Get cancelled appointments
+router.get("/cancelled", async (req, res, next) => {
+  try {
+    const appointments = await Appointment.find({ status: "cancelled" })
+      .populate("patientId", "name");
+    res.json(appointments);
+  } catch (err) {
+    next(err);
+  }
+});
+
+// GET /api/appointments/today - Get this week's appointments
+router.get("/today", async (req, res, next) => {
+  try {
+    const now = new Date();
+    const start = new Date(now);
+    start.setDate(now.getDate() - now.getDay()); // Sunday
+    start.setHours(0, 0, 0, 0);
+    const end = new Date(now);
+    end.setDate(now.getDate() + (6 - now.getDay())); // Saturday
+    end.setHours(23, 59, 59, 999);
+    const appointments = await Appointment.find({
+      date: { $gte: start, $lte: end },
+      status: { $ne: "cancelled" }
+    }).populate("patientId", "name");
+    // Format for frontend
+    const formatted = appointments.map(appt => ({
+      patientName: appt.patientId?.name || "Unknown",
+      reason: appt.notes || "General",
+      time: appt.date
+    }));
+    res.json(formatted);
   } catch (err) {
     next(err);
   }

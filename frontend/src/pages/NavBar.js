@@ -182,6 +182,19 @@ export default function NavBar() {
             <FaAppleAlt /> Nutrition Plan
           </Link>
         </li>
+        <li>
+          <Link to="/send-medication-request" className="btn" style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "var(--spacing-sm)",
+            background: "none",
+            color: "#e0eafc",
+            fontWeight: 500,
+            fontSize: 16
+          }}>
+            Send Med Request
+          </Link>
+        </li>
       </ul>
       <div style={{ marginTop: "auto", textAlign: "center" }}>
         <ProfileMenu />

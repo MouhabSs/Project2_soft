@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation, Link } from "react-router-dom";
 import {
   ThemeProvider,
@@ -45,6 +45,7 @@ import Messages from "./pages/Messages";
 import Settings from "./pages/Settings";
 import { useAuth } from "./auth/AuthProvider";
 import Notifications from "./components/Notifications";
+import SendMedicationRequestPage from "./pages/SendMedicationRequestPage";
 
 const drawerWidth = 240;
 
@@ -116,6 +117,7 @@ const menuItems = [
   { text: "Reports", icon: <AssessmentIcon />, path: "/reports" },
   { text: "Messages", icon: <MessageIcon />, path: "/messages" },
   { text: "Settings", icon: <SettingsIcon />, path: "/settings" },
+  { text: "Send Med Request", icon: <MessageIcon />, path: "/send-medication-request" },
 ];
 
 function PrivateRoute({ children }) {
@@ -253,6 +255,25 @@ function Layout({ children }) {
 }
 
 function App() {
+  const easterEggAudioRef = useRef(null);
+  const handleEasterEggClick = () => {
+    if (easterEggAudioRef.current) {
+      easterEggAudioRef.current.currentTime = 0;
+      easterEggAudioRef.current.play();
+    }
+  };
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.altKey && (e.key === 'e' || e.key === 'E')) {
+        if (easterEggAudioRef.current) {
+          easterEggAudioRef.current.currentTime = 0;
+          easterEggAudioRef.current.play();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <Router>
@@ -369,9 +390,28 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/send-medication-request"
+            element={
+              <PrivateRoute>
+                <Layout>
+                  <SendMedicationRequestPage />
+                </Layout>
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </Router>
     </ThemeProvider>
+  );
+  return (
+    <>
+      <audio ref={easterEggAudioRef} src={process.env.PUBLIC_URL + '/easter egg.ogg'} preload="auto" />
+      {/* More visible clickable text for the easter egg */}
+      <div style={{ position: 'fixed', bottom: 16, right: 24, opacity: 0.7, cursor: 'pointer', zIndex: 9999, background: 'rgba(255,255,255,0.15)', borderRadius: '8px', padding: '6px 14px' }} onClick={handleEasterEggClick} title="Click for a surprise!">
+        <span style={{ fontSize: '1.1rem', fontStyle: 'italic', color: '#1976d2', fontWeight: 600 }}>Nutrition is fun! 🎵</span>
+      </div>
+    </>
   );
 }
 
