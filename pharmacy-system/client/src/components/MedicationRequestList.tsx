@@ -46,10 +46,27 @@ const MedicationRequestList: React.FC = () => {
   const [medicationRequests, setMedicationRequests] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [filterStatus, setFilterStatus] = useState<string>('');
+  const [filterStartDate, setFilterStartDate] = useState<string>('');
+  const [filterEndDate, setFilterEndDate] = useState<string>('');
 
   const fetchMedicationRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/medication-requests');
+      setLoading(true);
+      const queryParams = new URLSearchParams();
+      if (filterStatus) {
+        queryParams.append('status', filterStatus);
+      }
+      if (filterStartDate) {
+        queryParams.append('startDate', filterStartDate);
+      }
+      if (filterEndDate) {
+        queryParams.append('endDate', filterEndDate);
+      }
+
+      const url = `http://localhost:5001/api/medication-requests${queryParams.toString() ? `?${queryParams.toString()}` : ''}`;
+      
+      const response = await axios.get(url);
       setMedicationRequests(response.data);
       setLoading(false);
     } catch (err: any) {
@@ -60,7 +77,7 @@ const MedicationRequestList: React.FC = () => {
 
   useEffect(() => {
     fetchMedicationRequests();
-  }, []);
+  }, [filterStatus, filterStartDate, filterEndDate]);
 
   if (loading) {
     return <div>Loading medication requests...</div>;
@@ -73,6 +90,20 @@ const MedicationRequestList: React.FC = () => {
   return (
     <div className="medication-request-list-page">
       <h2>Medication Requests</h2>
+      <div className="filter-controls">
+        <label htmlFor="statusFilter">Status:</label>
+        <select id="statusFilter" value={filterStatus} onChange={(e) => setFilterStatus(e.target.value)}>
+          <option value="">All</option>
+          <option value="active">Active</option>
+          <option value="dispensed">Dispensed</option>
+        </select>
+
+        <label htmlFor="startDateFilter">Start Date:</label>
+        <input type="date" id="startDateFilter" value={filterStartDate} onChange={(e) => setFilterStartDate(e.target.value)} />
+
+        <label htmlFor="endDateFilter">End Date:</label>
+        <input type="date" id="endDateFilter" value={filterEndDate} onChange={(e) => setFilterEndDate(e.target.value)} />
+      </div>
       {medicationRequests.length === 0 ? (
         <p>No medication requests found.</p>
       ) : (

@@ -42,7 +42,11 @@ function SendMedicationRequestPage() {
   useEffect(() => {
     const code = medicationCodeMapping[medicationDisplay];
     setMedicationCode(code || ''); // Set code if found, otherwise clear
-  }, [medicationDisplay]); // Rerun this effect when medicationDisplay changes
+    // If a code is found and no system is manually selected, default the system
+    if (code && !medicationSystem) {
+      setMedicationSystem('http://www.nlm.nih.gov/research/umls/rxnorm'); // Default to RXNorm
+    }
+  }, [medicationDisplay]); // Re-run this effect when medicationDisplay changes
 
   // Helper to display patient name
   const displayPatientName = (patient) => {
@@ -101,6 +105,7 @@ function SendMedicationRequestPage() {
     };
 
     console.log('Sending FHIR MedicationRequest:', fhirMedicationRequest);
+    console.log('FHIR Request Payload:', fhirMedicationRequest);
 
     try {
       // Send the FHIR MedicationRequest to the Pharmacy System's endpoint

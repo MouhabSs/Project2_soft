@@ -24,6 +24,7 @@ const MedicationRequestSchema = new mongoose.Schema({
     reference: String, // Reference to the FHIR Practitioner resource
     display: String
   },
+  medicationDisplayString: { type: String }, // Add field for displaying medication name from codeableconcept
   dosageInstruction: [{
     text: String,
     // Add other relevant dosage instruction fields
